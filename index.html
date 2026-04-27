@@ -72,7 +72,18 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .nav-links a:hover, .nav-links a.active { color: #fff; }
 .nav-cta { background: var(--green) !important; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 13px !important; transition: opacity 0.2s !important; }
 .nav-cta:hover { opacity: 0.88; }
-@media (max-width: 720px) { .nav-links { gap: 14px; } .nav-links a:not(.nav-cta):not(.active) { display: none; } }
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 101; }
+.hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 720px) {
+  .hamburger { display: flex; }
+  .nav-links { display: none !important; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: rgba(15,17,23,0.98); backdrop-filter: blur(14px); padding: 8px 0 16px; border-bottom: 1px solid var(--border); gap: 0 !important; z-index: 99; }
+  .nav-links.open { display: flex !important; }
+  .nav-links a { padding: 14px 24px !important; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text) !important; display: block !important; }
+  .nav-links a.nav-cta { margin: 8px 24px 0; text-align: center; border-bottom: none; border-radius: 8px; }
+}
 
 /* HERO */
 .hero {
@@ -257,13 +268,26 @@ body {
   .photo-grid { grid-template-columns: 1fr !important; height: 260px !important; }
   .photo-grid > div:not(:first-child) { display: none !important; }
 
-  /* Trust bar: 2-column layout */
+  /* Trust bar: 2-column layout, smaller font to prevent overflow */
   .trust-inner { flex-wrap: wrap; }
-  .trust-stat { min-width: 46%; flex: 0 0 46%; }
-  .trust-stat:nth-child(even) { border-right: none !important; }
+  .trust-stat { min-width: 50%; flex: 0 0 50%; padding: 16px 12px; border-right: none !important; border-bottom: 1px solid var(--border); }
+  .trust-stat:nth-child(odd) { border-right: 1px solid var(--border) !important; }
+  .trust-stat:nth-child(3), .trust-stat:nth-child(4) { border-bottom: none; }
+  .trust-num { font-size: 26px; }
+  .trust-label { font-size: 11px; }
+  .trust-sub { font-size: 9px; }
 
-  /* Awards: let items wrap and fill width */
-  .awards-row > div { flex-shrink: 0; width: calc(50% - 10px) !important; height: 120px !important; padding: 12px !important; }
+  /* Awards: 2 per row on mobile */
+  .awards-row > div { flex-shrink: 0; width: calc(50% - 10px) !important; height: 110px !important; padding: 10px !important; }
+
+  /* Photo strip: show all 3 stacked */
+  .photo-grid { grid-template-columns: 1fr !important; height: auto !important; }
+  .photo-grid > div { height: 220px; }
+  .photo-grid > div:not(:first-child) { display: block !important; }
+
+  /* Testimonials: ensure single column, no overflow */
+  .testi-grid { grid-template-columns: 1fr !important; }
+  .testi { padding: 22px 20px; }
 
   /* Sections: tighter padding */
   .section { padding: 56px 16px !important; }
@@ -282,7 +306,7 @@ body {
   /* Hero proof numbers: smaller font */
   .proof-num { font-size: 22px !important; }
   /* Awards: stack single column */
-  .awards-row > div { width: 100% !important; max-width: 280px; height: 120px !important; }
+  .awards-row > div { width: 100% !important; max-width: 300px; height: 110px !important; }
 }
 
 </style>
@@ -299,6 +323,9 @@ body {
       <a href="portfolio-performance.html">Results</a>
       <a href="contact.html" class="nav-cta">Book a Discovery Call</a>
     </div>
+    <button class="hamburger" aria-label="Open menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open');">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -388,7 +415,7 @@ body {
     <div class="trust-stat">
       <span class="trust-num">$200K+</span>
       <div class="trust-label">Avg Dollar Gain</div>
-      <div class="trust-sub">Per property sourced</div>
+      <div class="trust-sub">Incl. recently settled — actual gains still growing</div>
     </div>
     <div class="trust-stat" style="border-right:none;">
       <span class="trust-num">3.3%</span>

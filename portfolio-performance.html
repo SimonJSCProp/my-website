@@ -55,7 +55,18 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .nav-links a:hover, .nav-links a.active { color: #fff; }
 .nav-cta { background: var(--green) !important; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 13px !important; }
 .nav-cta:hover { opacity: 0.9; }
-@media (max-width: 720px) { .nav-links { gap: 14px; } .nav-links a:not(.nav-cta) { display: none; } }
+.hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 101; }
+.hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 720px) {
+  .hamburger { display: flex; }
+  .nav-links { display: none !important; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: rgba(15,17,23,0.98); backdrop-filter: blur(14px); padding: 8px 0 16px; border-bottom: 1px solid var(--border); gap: 0 !important; z-index: 99; }
+  .nav-links.open { display: flex !important; }
+  .nav-links a { padding: 14px 24px !important; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text) !important; display: block !important; }
+  .nav-links a.nav-cta { margin: 8px 24px 0; text-align: center; border-bottom: none; border-radius: 8px; }
+}
 
 /* HERO */
 .hero { position: relative; background: linear-gradient(160deg, #0f1117 0%, #131d30 40%, #0f1e20 100%); padding: 90px 24px 70px; text-align: center; overflow: hidden; }
@@ -196,6 +207,9 @@ body {
       <a href="portfolio-performance.html" class="active">Results</a>
       <a href="contact.html" class="nav-cta">Book a Discovery Call</a>
     </div>
+    <button class="hamburger" aria-label="Open menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open');">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
