@@ -1,1118 +1,1023 @@
-<\!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Performance | JSC Property Investments</title>
+<title>Buyers Agent Brisbane & Adelaide | Fixed Fee | JSC Property Investments</title>
+<meta name="description" content="JSC Property Investments — Australia's fixed-fee buyers agency. No kickbacks. No conflicts. Expert buyer representation in Brisbane QLD and Adelaide SA. Book a free Discovery Call today.">
+<meta name="keywords" content="buyers agent Brisbane, buyers agent Adelaide, fixed fee buyers agent, buyers agency Queensland, buyers agency South Australia, investment property buyers agent, property buyers agent QLD">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jscpropertyinvestments.com.au/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JSC Property Investments">
+<meta property="og:title" content="Buyers Agent Brisbane & Adelaide | Fixed Fee | JSC Property Investments">
+<meta property="og:description" content="Fixed-fee buyers agency. No kickbacks. No conflicts of interest. Expert buyer representation in Brisbane QLD and Adelaide SA.">
+<meta property="og:url" content="https://jscpropertyinvestments.com.au/">
+<meta property="og:image" content="https://drive.google.com/thumbnail?id=1ymNQGZM-U5vJLVwp8-ixYXcErkIwizDm&sz=w1200">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Buyers Agent Brisbane & Adelaide | Fixed Fee | JSC Property Investments">
+<meta name="twitter:description" content="Fixed-fee buyers agency. No kickbacks. No conflicts. Expert buyer representation in Brisbane QLD and Adelaide SA.">
+<meta name="twitter:image" content="https://drive.google.com/thumbnail?id=1ymNQGZM-U5vJLVwp8-ixYXcErkIwizDm&sz=w1200">
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "JSC Property Investments",
+  "description": "Fixed-fee buyers agency operating in Queensland and South Australia. No kickbacks, no conflicts of interest. Expert buyer representation for investors and home buyers.",
+  "url": "https://jscpropertyinvestments.com.au",
+  "telephone": "+61434998295",
+  "email": "simon@jscpropertyinvestments.com.au",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "49 Yan Yean St",
+    "addressLocality": "Beenleigh",
+    "addressRegion": "QLD",
+    "postalCode": "4207",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -27.7151,
+    "longitude": 153.2002
+  },
+  "areaServed": [
+    {"@type": "State", "name": "Queensland", "sameAs": "https://en.wikipedia.org/wiki/Queensland"},
+    {"@type": "State", "name": "South Australia", "sameAs": "https://en.wikipedia.org/wiki/South_Australia"}
+  ],
+  "priceRange": "Fixed Fee",
+  "openingHours": "Mo-Fr 08:00-18:00",
+  "sameAs": ["https://www.youtube.com/watch?v=CcQMOvNKaSY"]
+}
+</script>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --dark: #0f1117; --dark2: #161c28; --dark3: #1b2236; --dark4: #1f2a44;
+  --green: #2ecc71; --green-dark: #27ae60; --green-glow: rgba(46,204,113,0.15);
+  --gold: #f0b429; --border: rgba(255,255,255,0.08);
+  --text: #e8eaf0; --muted: #7a8096;
+}
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; }
 
-  body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    color: #191919;
-    background: #fff;
-    line-height: 1.6;
-  }
+/* NAV */
+.nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.96); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); padding: 0 24px; }
+.nav-inner { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.nav-logo { font-size: 17px; font-weight: 800; color: #fff; text-decoration: none; }
+.logo-accent { color: var(--green); }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: #fff; }
+.nav-cta { background: var(--green) !important; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 13px !important; transition: opacity 0.2s !important; }
+.nav-cta:hover { opacity: 0.88; }
+@media (max-width: 720px) { .nav-links { gap: 14px; } .nav-links a:not(.nav-cta):not(.active) { display: none; } }
 
-  /* ── HERO ── */
-  .pp-hero {
-    background: #121213;
-    color: #fff;
-    padding: 80px 24px 60px;
-    text-align: center;
-  }
-  .pp-hero .pp-label {
-    display: inline-block;
-    background: #339966;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 6px 16px;
-    border-radius: 20px;
-    margin-bottom: 24px;
-  }
-  .pp-hero h1 {
-    font-size: clamp(32px, 5vw, 52px);
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .pp-hero h1 span { color: #339966; }
-  .pp-hero p {
-    font-size: 18px;
-    color: #c0c0c0;
-    max-width: 600px;
-    margin: 0 auto 48px;
-  }
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 94vh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 80px 24px;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(160deg, #0c0f1c 0%, #0f1c35 45%, #091a14 100%);
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -180px; left: 50%; transform: translateX(-50%);
+  width: 1000px; height: 700px;
+  background: radial-gradient(ellipse, rgba(46,204,113,0.11) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(46,204,113,0.3), transparent);
+}
+.hero-inner { position: relative; max-width: 860px; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--green-glow); border: 1px solid rgba(46,204,113,0.3);
+  color: var(--green); font-size: 11px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  padding: 8px 18px; border-radius: 100px; margin-bottom: 32px;
+}
+.hero-tag::before { content: '●'; font-size: 8px; }
+.hero h1 {
+  font-size: clamp(40px, 7vw, 80px);
+  font-weight: 900; line-height: 1.03; letter-spacing: -2px; margin-bottom: 26px;
+}
+.grad { background: linear-gradient(135deg, #2ecc71 0%, #27ae60 50%, #1a9650 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-sub { font-size: 19px; color: var(--muted); max-width: 600px; margin: 0 auto 48px; line-height: 1.75; }
+.hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-primary { display: inline-block; background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; font-size: 16px; font-weight: 800; padding: 17px 38px; border-radius: 10px; text-decoration: none; box-shadow: 0 8px 32px rgba(46,204,113,0.35); transition: transform 0.2s, box-shadow 0.2s; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(46,204,113,0.45); }
+.btn-secondary { display: inline-block; background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: var(--text); font-size: 16px; font-weight: 700; padding: 17px 38px; border-radius: 10px; text-decoration: none; transition: background 0.2s, border-color 0.2s; }
+.btn-secondary:hover { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.18); }
+.hero-proof { margin-top: 52px; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.proof-item { text-align: center; }
+.proof-num { font-size: 28px; font-weight: 900; color: var(--green); letter-spacing: -0.5px; display: block; }
+.proof-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-top: 2px; }
+.proof-divider { width: 1px; background: var(--border); align-self: stretch; }
 
-  /* ── STATS BAR ── */
-  .pp-stats {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    flex-wrap: wrap;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 48px;
-  }
-  .pp-stat {
-    flex: 1;
-    min-width: 160px;
-    max-width: 220px;
-    padding: 16px 24px;
-    border-right: 1px solid rgba(255,255,255,0.1);
-    text-align: center;
-  }
-  .pp-stat:last-child { border-right: none; }
-  .pp-stat-num {
-    font-size: 40px;
-    font-weight: 800;
-    color: #339966;
-    display: block;
-    line-height: 1;
-  }
-  .pp-stat-label {
-    font-size: 13px;
-    color: #a0a0a0;
-    margin-top: 6px;
-    letter-spacing: 0.5px;
-  }
+/* TRUST BAR */
+.trust-bar { background: linear-gradient(135deg, #161c28 0%, #1a2035 100%); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 36px 24px; }
+.trust-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; gap: 0; flex-wrap: wrap; }
+.trust-stat { flex: 1; min-width: 190px; text-align: center; padding: 20px 24px; border-right: 1px solid var(--border); }
+.trust-stat:last-child { border-right: none; }
+.trust-num { font-size: 38px; font-weight: 900; line-height: 1; background: linear-gradient(135deg, #2ecc71, #27ae60); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px; display: block; }
+.trust-label { font-size: 12px; font-weight: 700; color: var(--text); margin-top: 7px; }
+.trust-sub { font-size: 10px; color: var(--muted); margin-top: 3px; line-height: 1.4; }
 
-  /* ── SECTION WRAPPER ── */
-  .pp-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 72px 24px;
-  }
+/* SECTIONS */
+.section { max-width: 1200px; margin: 0 auto; padding: 96px 24px; }
+.section.dark-bg { background: linear-gradient(135deg, #161c28 0%, #1a2035 100%); max-width: 100%; padding: 96px 24px; }
+.section.dark-bg .section-inner { max-width: 1200px; margin: 0 auto; }
+.section-head { text-align: center; margin-bottom: 64px; }
+.section-tag { display: inline-block; background: var(--green-glow); border: 1px solid rgba(46,204,113,0.25); color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
+.section-head h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 800; letter-spacing: -0.7px; margin-bottom: 14px; }
+.section-head p { font-size: 17px; color: var(--muted); max-width: 540px; margin: 0 auto; }
 
-  .pp-section-header {
-    text-align: center;
-    margin-bottom: 56px;
-  }
-  .pp-section-header h2 {
-    font-size: clamp(26px, 4vw, 38px);
-    font-weight: 800;
-    color: #121213;
-    margin-bottom: 12px;
-  }
-  .pp-section-header p {
-    font-size: 17px;
-    color: #555;
-    max-width: 560px;
-    margin: 0 auto;
-  }
+/* HOW IT WORKS */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative; }
+@media (max-width: 900px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px) { .steps { grid-template-columns: 1fr; } }
+.step-connector { position: absolute; top: 52px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(46,204,113,0.25) 30%, rgba(46,204,113,0.25) 70%, transparent); z-index: 0; }
+.step { background: var(--dark2); border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; position: relative; z-index: 1; transition: border-color 0.25s, box-shadow 0.25s; }
+.step:hover { border-color: rgba(46,204,113,0.25); box-shadow: 0 16px 48px rgba(0,0,0,0.35); }
+.step-num { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; font-size: 17px; font-weight: 900; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.step h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: #fff; }
+.step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
-  /* ── FILTER TABS ── */
-  .pp-filters {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 48px;
-  }
-  .pp-filter-btn {
-    padding: 10px 22px;
-    border-radius: 25px;
-    border: 2px solid #ddd;
-    background: #fff;
-    color: #555;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .pp-filter-btn:hover,
-  .pp-filter-btn.active {
-    background: #339966;
-    border-color: #339966;
-    color: #fff;
-  }
+/* WHY JSC */
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 900px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px) { .why-grid { grid-template-columns: 1fr; } }
+.why-card { background: var(--dark3); border: 1px solid var(--border); border-radius: 14px; padding: 28px; transition: transform 0.2s, border-color 0.2s; }
+.why-card:hover { transform: translateY(-3px); border-color: rgba(46,204,113,0.2); }
+.why-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+.why-card p { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
 
-  /* ── CARD GRID ── */
-  .pp-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    gap: 28px;
-  }
+/* RESULTS SNAPSHOT */
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; }
+.result-card { background: var(--dark3); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
+.result-card:hover { transform: translateY(-3px); border-color: rgba(46,204,113,0.25); }
+.rc-top { padding: 20px 22px 14px; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.rc-badge { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; white-space: nowrap; }
+.rc-badge.inv { background: rgba(46,204,113,0.12); color: var(--green); border: 1px solid rgba(46,204,113,0.2); }
+.rc-badge.oo { background: rgba(240,180,41,0.12); color: var(--gold); border: 1px solid rgba(240,180,41,0.2); }
+.rc-growth { font-size: 28px; font-weight: 900; color: var(--green); line-height: 1; letter-spacing: -0.5px; }
+.rc-name { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
+.rc-loc { font-size: 12px; color: var(--muted); }
+.rc-body { padding: 16px 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.rc-stat { }
+.rc-stat-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+.rc-stat-val { font-size: 16px; font-weight: 800; color: #fff; margin-top: 2px; }
+.rc-stat-val.up { color: var(--green); }
+.results-cta { text-align: center; }
+.results-cta a { display: inline-flex; align-items: center; gap: 8px; color: var(--green); font-weight: 700; font-size: 15px; text-decoration: none; border: 1px solid rgba(46,204,113,0.3); padding: 12px 28px; border-radius: 8px; transition: background 0.2s; }
+.results-cta a:hover { background: var(--green-glow); }
 
-  .pp-card {
-    background: #fff;
-    border-radius: 12px;
-    border: 1px solid #e8e8e8;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .pp-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.10);
-  }
+/* WHO WE HELP */
+.who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.who-card { border-radius: 16px; padding: 40px 36px; border: 1px solid var(--border); }
+.who-card.inv-card { background: linear-gradient(135deg, rgba(46,204,113,0.06), rgba(46,204,113,0.02)); border-color: rgba(46,204,113,0.15); }
+.who-card.oo-card { background: linear-gradient(135deg, rgba(240,180,41,0.06), rgba(240,180,41,0.02)); border-color: rgba(240,180,41,0.15); }
+.who-icon { font-size: 36px; margin-bottom: 16px; }
+.who-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 10px; }
+.who-card.inv-card h3 { color: var(--green); }
+.who-card.oo-card h3 { color: var(--gold); }
+.who-card > p { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
+.who-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.who-list li { font-size: 14px; color: var(--text); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
+.who-list li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.who-card.oo-card .who-list li::before { color: var(--gold); }
+@media (max-width: 680px) { .who-grid { grid-template-columns: 1fr; } }
 
-  .pp-card-header {
-    background: #121213;
-    padding: 20px 24px 16px;
-    position: relative;
-  }
-  .pp-card-badge {
-    display: inline-block;
-    background: #339966;
-    color: #fff;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-  }
-  .pp-card-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-    margin: 0;
-  }
-  .pp-card-location {
-    font-size: 13px;
-    color: #888;
-    margin-top: 4px;
-  }
+/* TESTIMONIALS */
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.testi { background: var(--dark2); border: 1px solid var(--border); border-radius: 14px; padding: 28px; }
+.testi-quote { font-size: 32px; color: var(--green); font-weight: 900; line-height: 1; margin-bottom: 12px; }
+.testi p { font-size: 14px; color: var(--muted); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--dark3), var(--dark4)); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: var(--green); }
+.testi-name { font-size: 14px; font-weight: 700; color: #fff; }
+.testi-detail { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.testi-stars { color: #f0b429; font-size: 13px; letter-spacing: 2px; margin-bottom: 2px; }
 
-  .pp-card-body {
-    padding: 20px 24px;
-  }
+/* CTA */
+.cta-section { position: relative; overflow: hidden; background: linear-gradient(160deg, #131d30 0%, #0f1e20 100%); border-top: 1px solid var(--border); padding: 96px 24px; text-align: center; }
+.cta-section::before { content: ''; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 700px; height: 600px; background: radial-gradient(ellipse, rgba(46,204,113,0.10) 0%, transparent 70%); }
+.cta-section h2 { font-size: clamp(30px, 4vw, 52px); font-weight: 900; letter-spacing: -1px; margin-bottom: 18px; position: relative; }
+.cta-section p { font-size: 18px; color: var(--muted); max-width: 500px; margin: 0 auto 44px; position: relative; }
 
-  .pp-card-story {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    min-height: 60px;
-  }
+/* FOOTER */
+.site-footer { background: #0b0e14; border-top: 1px solid rgba(255,255,255,0.06); padding: 52px 24px 28px; }
+.footer-inner { max-width: 1300px; margin: 0 auto; }
+.footer-top { display: flex; gap: 48px; flex-wrap: wrap; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.footer-brand { flex: 2; min-width: 220px; }
+.footer-logo { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 10px; }
+.footer-brand p { font-size: 13px; color: var(--muted); line-height: 1.7; max-width: 280px; margin-bottom: 14px; }
+.footer-brand a { font-size: 13px; color: var(--green); text-decoration: none; }
+.footer-nav { flex: 1; min-width: 130px; }
+.footer-nav h4 { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--green); font-weight: 700; margin-bottom: 14px; }
+.footer-nav a { display: block; color: var(--muted); text-decoration: none; font-size: 13px; margin-bottom: 10px; transition: color 0.2s; }
+.footer-nav a:hover { color: #fff; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.footer-copy { font-size: 11.5px; color: #3d4155; line-height: 1.7; }
 
-  .pp-metrics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 16px;
-  }
-  .pp-metric {
-    background: #F6F6F6;
-    border-radius: 8px;
-    padding: 12px 14px;
-  }
-  .pp-metric-label {
-    font-size: 11px;
-    color: #888;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .pp-metric-value {
-    font-size: 17px;
-    font-weight: 800;
-    color: #121213;
-    margin-top: 2px;
-  }
-  .pp-metric-value.green { color: #339966; }
+/* ── BACKGROUND ENHANCEMENT ────────────────────────────────── */
+body {
+  background-color: var(--dark);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(46,204,113,0.13) 0%, transparent 60%),
+    radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px;
+  background-attachment: fixed;
+}
 
-  .pp-card-result {
-    background: linear-gradient(135deg, #121213, #1e1e20);
-    border-radius: 8px;
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .pp-card-result-icon {
-    font-size: 22px;
-  }
-  .pp-card-result-text {
-    font-size: 13px;
-    color: #c0c0c0;
-  }
-  .pp-card-result-text strong {
-    color: #339966;
-    font-size: 15px;
-    display: block;
-  }
+/* ── MOBILE OPTIMIZATIONS ────────────────────────────────── */
+@media (max-width: 640px) {
+  /* Nav: shrink logo so it doesn't crowd the CTA button */
+  .nav-logo { font-size: 13px; }
 
-  /* ── CTA SECTION ── */
-  .pp-cta {
-    background: #121213;
-    color: #fff;
-    padding: 80px 24px;
-    text-align: center;
-  }
-  .pp-cta h2 {
-    font-size: clamp(28px, 4vw, 42px);
-    font-weight: 800;
-    margin-bottom: 16px;
-  }
-  .pp-cta h2 span { color: #339966; }
-  .pp-cta p {
-    font-size: 18px;
-    color: #a0a0a0;
-    max-width: 520px;
-    margin: 0 auto 40px;
-  }
-  .pp-cta-btn {
-    display: inline-block;
-    background: #339966;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 18px 40px;
-    border-radius: 6px;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    transition: background 0.2s, transform 0.2s;
-  }
-  .pp-cta-btn:hover {
-    background: #2a7a52;
-    transform: translateY(-2px);
-  }
+  /* Hero: centre-align on mobile, reduce padding */
+  .hero { padding: 36px 16px 52px !important; text-align: center !important; }
+  section.hero > div { gap: 28px !important; }
+  .hero-btns { justify-content: center !important; flex-direction: column; align-items: stretch; }
+  .btn-primary, .btn-secondary { text-align: center !important; display: block !important; }
 
-  /* ── DISCLAIMER ── */
-  .pp-disclaimer {
-    background: #F6F6F6;
-    padding: 24px;
-    text-align: center;
-    font-size: 12px;
-    color: #888;
-    border-top: 1px solid #e0e0e0;
-  }
+  /* Hero 4-column stats → 2×2 grid */
+  .hero-stats { grid-template-columns: repeat(2,1fr) !important; }
 
-  @media (max-width: 600px) {
-    .pp-stat { min-width: 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .pp-grid { grid-template-columns: 1fr; }
-    .pp-metrics { grid-template-columns: 1fr 1fr; }
-  }
+  /* Photo strip: show only the hero image, at a reasonable height */
+  .photo-grid { grid-template-columns: 1fr !important; height: 260px !important; }
+  .photo-grid > div:not(:first-child) { display: none !important; }
+
+  /* Trust bar: 2-column layout */
+  .trust-inner { flex-wrap: wrap; }
+  .trust-stat { min-width: 46%; flex: 0 0 46%; }
+  .trust-stat:nth-child(even) { border-right: none !important; }
+
+  /* Awards: let items wrap and fill width */
+  .awards-row > div { flex-shrink: 0; width: calc(50% - 10px) !important; height: 120px !important; padding: 12px !important; }
+
+  /* Sections: tighter padding */
+  .section { padding: 56px 16px !important; }
+  .section.dark-bg { padding: 56px 0 !important; }
+  .section.dark-bg .section-inner { padding: 0 16px !important; }
+
+  /* CTA section */
+  .cta-section { padding: 60px 16px !important; }
+
+  /* Footer */
+  .footer-top { gap: 24px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  /* Hero proof numbers: smaller font */
+  .proof-num { font-size: 22px !important; }
+  /* Awards: stack single column */
+  .awards-row > div { width: 100% !important; max-width: 280px; height: 120px !important; }
+}
+
 </style>
 </head>
 <body>
 
-<\!-- ══ HERO ══ -->
-<section class="pp-hero">
-  <div class="pp-label">Real Results. Real Clients.</div>
-  <h1>Portfolio <span>Performance</span></h1>
-  <p>Every property below was sourced, negotiated, and secured by the JSC team. Here's what we've built for our clients.</p>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-accent">JSC</span> Property Investments</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="portfolio-performance.html">Results</a>
+      <a href="contact.html" class="nav-cta">Book a Discovery Call</a>
+    </div>
+  </div>
+</nav>
 
-  <div class="pp-stats">
-    <div class="pp-stat">
-      <span class="pp-stat-num">20+</span>
-      <div class="pp-stat-label">Properties Secured</div>
+<!-- HERO -->
+<section class="hero" style="min-height:auto;padding:60px 24px 72px;text-align:left;">
+  <div style="max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+    <div>
+      <div class="hero-tag" style="justify-content:flex-start;">🎖️ Veteran-Owned · Fixed-Fee Buyers Agency</div>
+      <h1 style="letter-spacing:-2.5px;">The Smartest Move<br><span class="grad">You'll Ever Make.</span></h1>
+      <p style="font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);margin-bottom:20px;opacity:0.9;">Your Shortcut To Freedom</p>
+      <p class="hero-sub" style="margin-left:0;text-align:left;">Most buyers spend 12–18 months searching on their own — and still overpay. JSC clients find and settle in a fraction of the time, buying below market value, with a track record of 30%+ average capital growth (including recently settled properties) and zero losses. Two veteran brothers. One fixed fee. No conflicts of interest.</p>
+      <div class="hero-btns" style="justify-content:flex-start;">
+        <a href="contact.html" class="btn-primary">Book a Discovery Call</a>
+        <a href="portfolio-performance.html" class="btn-secondary">View Our Results →</a>
+      </div>
+      <div class="hero-stats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="padding:18px 20px;text-align:center;border-right:1px solid var(--border);">
+          <span class="proof-num" style="font-size:26px;">3.7x</span>
+          <div class="proof-label" style="font-size:10px;margin-top:4px;">Higher Growth Than National Avg</div>
+        </div>
+        <div style="padding:18px 20px;text-align:center;border-right:1px solid var(--border);">
+          <span class="proof-num" style="font-size:26px;">2.5x</span>
+          <div class="proof-label" style="font-size:10px;margin-top:4px;">Higher Growth Than Brisbane Avg</div>
+        </div>
+        <div style="padding:18px 20px;text-align:center;border-right:1px solid var(--border);">
+          <span class="proof-num" style="font-size:26px;">Zero</span>
+          <div class="proof-label" style="font-size:10px;margin-top:4px;">Client Losses</div>
+        </div>
+        <div style="padding:18px 20px;text-align:center;">
+          <span class="proof-num" style="font-size:26px;">$11,508</span>
+          <div class="proof-label" style="font-size:10px;margin-top:4px;">Monthly Equity Per Property</div>
+        </div>
+      </div>
     </div>
-    <div class="pp-stat">
-      <span class="pp-stat-num">$14M+</span>
-      <div class="pp-stat-label">Total Portfolio Value</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;">
+      <div style="position:absolute;top:-20px;right:-20px;background:var(--green);color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:8px 14px;border-radius:100px;z-index:2;">✓ Real JSC Properties</div>
+      <div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="https://drive.google.com/thumbnail?id=1ymNQGZM-U5vJLVwp8-ixYXcErkIwizDm&sz=w800" alt="Investment property purchased by JSC buyers agent Brisbane Queensland" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="https://drive.google.com/thumbnail?id=1nO0zUVAsN0tv9w9W5wEPGScytWZZCLaR&sz=w800" alt="JSC Property Investments client property Brisbane QLD" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="https://drive.google.com/thumbnail?id=1i1IuSmTpuzeW48Rij2GaiXJMrSS9C_2k&sz=w800" alt="Investment property result secured by JSC buyers agency Queensland" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="https://drive.google.com/thumbnail?id=1tCS1SRu2iOPM7kaI1MEmQNwDONFjsSdz&sz=w800" alt="Property secured below market value by JSC buyers agent" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="https://drive.google.com/thumbnail?id=1kKdt0Gt5Ox2ztD5VB1FEiBLWWFmlhob3&sz=w800" alt="JSC buyers agent property purchase Brisbane" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="https://drive.google.com/thumbnail?id=18D5Vb4oCJkhPtrAgLQTAKOQiIiVIuHtW&sz=w800" alt="Investment property sourced by JSC Property Investments Queensland" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div>
     </div>
-    <div class="pp-stat">
-      <span class="pp-stat-num">18.4%</span>
-      <div class="pp-stat-label">Avg. Capital Growth</div>
-    </div>
-    <div class="pp-stat">
-      <span class="pp-stat-num">$1,840</span>
-      <div class="pp-stat-label">Avg. Weekly Rent</div>
+  </div>
+  <style>
+    @media (max-width: 900px) {
+      section.hero > div { grid-template-columns: 1fr !important; }
+      section.hero > div > div:last-child { display: none !important; }
+    }
+  </style>
+</section>
+
+<!-- VIDEO SECTION -->
+<section style="background:linear-gradient(180deg,#0b0f1a 0%,#0f1117 100%);padding:80px 24px;text-align:center;">
+  <div style="max-width:920px;margin:0 auto;">
+    <p style="font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);margin-bottom:14px;">Who We Are</p>
+    <h2 style="font-size:clamp(26px,4vw,40px);font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.5px;">The people behind your property strategy</h2>
+    <p style="color:var(--muted);font-size:17px;max-width:580px;margin:0 auto 40px;line-height:1.7;">Two veterans. One fixed fee. Zero conflicts. See why our clients describe JSC as the only buyers agency they'd ever refer to a friend.</p>
+    <div style="position:relative;width:100%;padding-bottom:56.25%;border-radius:18px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.07);">
+      <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://player.vimeo.com/video/1186802561?badge=0&autopause=0&color=2ecc71&title=0&byline=0&portrait=0" title="JSC Property Investments — Who We Are" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </section>
 
-<\!-- ══ CASE STUDIES ══ -->
-<div class="pp-section">
-  <div class="pp-section-header">
-    <h2>Client Success Stories</h2>
-    <p>From first-time investors to growing portfolios — these are the outcomes we deliver.</p>
+<!-- AWARDS BAR -->
+<div style="background:#0b0f1a;border-bottom:1px solid rgba(255,255,255,0.06);padding:28px 24px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#7a8096;margin-bottom:20px;">🏆 Award-Winning Buyers Agency</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;">
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:center;width:240px;height:160px;flex-shrink:0;"><img src="https://drive.google.com/thumbnail?id=1IL8vBs_IcpJTOtvZ_uNdYgD2QS8SM8Jn&sz=w400" alt="Best Small Business Australia 2025 award — JSC Property Investments" alt="Best Small Business Australia 2025" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:center;width:240px;height:160px;flex-shrink:0;"><img src="https://drive.google.com/thumbnail?id=1usv8qqmTI7WbZsmcRiEqj3RMEj_xYO4F&sz=w400" alt="Best Startup Australia 2025 award — JSC Property Investments" alt="Best Startup Australia 2025" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:center;width:240px;height:160px;flex-shrink:0;"><img src="https://drive.google.com/thumbnail?id=1zTLsmp_2k3oxHfHw35MKYZkVA8zv7Nwj&sz=w400" alt="Best in Class Australia 2025 award — JSC Property Investments" alt="Best in Class Australia 2025" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:center;width:240px;height:160px;flex-shrink:0;"><img src="https://drive.google.com/thumbnail?id=1wUXUYRLs7Rd2z-2kyNPntRqs6ku7Fwdj&sz=w400" alt="BASA Awards Winner — JSC Property Investments buyers agency" alt="BASA Awards Winner" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:0;display:flex;align-items:center;justify-content:center;width:240px;height:160px;flex-shrink:0;overflow:hidden;"><img src="https://drive.google.com/thumbnail?id=1NLlKbXOYzqn6aKVXR0bfgExQmE1idAXw&sz=w800" alt="Champions 2025 Finalist — JSC Property Investments" alt="Champions 2025 Finalist" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+    </div>
   </div>
-
-  <div class="pp-filters">
-    <button class="pp-filter-btn active" onclick="filterCards('all', this)">All Properties</button>
-    <button class="pp-filter-btn" onclick="filterCards('QLD', this)">QLD</button>
-    <button class="pp-filter-btn" onclick="filterCards('NSW', this)">NSW</button>
-    <button class="pp-filter-btn" onclick="filterCards('VIC', this)">VIC</button>
-    <button class="pp-filter-btn" onclick="filterCards('SA', this)">SA</button>
-    <button class="pp-filter-btn" onclick="filterCards('WA', this)">WA</button>
-    <button class="pp-filter-btn" onclick="filterCards('investor', this)">Investor</button>
-    <button class="pp-filter-btn" onclick="filterCards('owner-occupier', this)">Owner-Occupier</button>
-  </div>
-
-  <div class="pp-grid" id="pp-grid">
-
-    <\!-- CARD 1 -->
-    <div class="pp-card" data-state="QLD" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · QLD</div>
-        <div class="pp-card-title">First Investment Property</div>
-        <div class="pp-card-location">📍 Ipswich, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A Brisbane couple wanted to enter the property market but didn't know where to start. JSC identified a high-growth corridor in Ipswich and secured a property $28K below asking.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$485,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$610,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+25.8%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$520 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🏆</div>
-          <div class="pp-card-result-text">
-            <strong>$125,000 equity gain in 18 months</strong>
-            Positively geared from day one
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 2 -->
-    <div class="pp-card" data-state="QLD" data-type="owner-occupier">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Owner-Occupier · QLD</div>
-        <div class="pp-card-title">Family Home Purchase</div>
-        <div class="pp-card-location">📍 Springfield Lakes, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A growing family was outbid three times before engaging JSC. We restructured their offer strategy and secured their dream home in a tightly held suburb under budget.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$720,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$895,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+24.3%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Saved vs. List</div>
-            <div class="pp-metric-value">$31,000</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🏡</div>
-          <div class="pp-card-result-text">
-            <strong>Secured in 3 weeks after 3 prior failed attempts</strong>
-            $31K below original asking price
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 3 -->
-    <div class="pp-card" data-state="QLD" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · QLD</div>
-        <div class="pp-card-title">SMSF Investment Property</div>
-        <div class="pp-card-location">📍 Toowoomba, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A self-managed super fund client needed a compliant, cashflow-positive investment. JSC sourced a dual-income property with strong long-term fundamentals.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$560,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$695,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+24.1%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$680 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">📈</div>
-          <div class="pp-card-result-text">
-            <strong>$135,000 equity gain · 6.3% gross yield</strong>
-            Dual income — cashflow positive from settlement
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 4 -->
-    <div class="pp-card" data-state="NSW" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · NSW</div>
-        <div class="pp-card-title">Interstate Investment</div>
-        <div class="pp-card-location">📍 Tamworth, NSW</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A Brisbane-based professional wanted to diversify interstate. JSC's research identified Tamworth as an undervalued regional hub and negotiated a strong off-market deal.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$395,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$510,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+29.1%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$450 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🎯</div>
-          <div class="pp-card-result-text">
-            <strong>Off-market purchase · $115K equity in 14 months</strong>
-            5.9% yield from day one
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 5 -->
-    <div class="pp-card" data-state="QLD" data-type="owner-occupier">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Owner-Occupier · QLD</div>
-        <div class="pp-card-title">ADF Veteran Relocation</div>
-        <div class="pp-card-location">📍 Morayfield, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">An ADF veteran posted to Brisbane needed a quality family home fast. JSC navigated DHOAS entitlements, compressed the search to 6 weeks, and negotiated $22K off asking price.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$648,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$780,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+20.4%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Saved vs. List</div>
-            <div class="pp-metric-value">$22,000</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🎖️</div>
-          <div class="pp-card-result-text">
-            <strong>Settled in 6 weeks · $22K below asking</strong>
-            Full DHOAS entitlement utilised
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 6 -->
-    <div class="pp-card" data-state="SA" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · SA</div>
-        <div class="pp-card-title">High-Yield Investor</div>
-        <div class="pp-card-location">📍 Elizabeth, SA</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A client seeking cashflow over capital growth was steered toward Adelaide's northern suburbs. JSC secured a renovated property with an immediate high-yield tenancy in place.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$320,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$415,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Gross Yield</div>
-            <div class="pp-metric-value green">7.1%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$437 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">💰</div>
-          <div class="pp-card-result-text">
-            <strong>$95K equity gain · 7.1% gross yield</strong>
-            Tenant in place from settlement day
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 7 -->
-    <div class="pp-card" data-state="QLD" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · QLD</div>
-        <div class="pp-card-title">Portfolio Property #2</div>
-        <div class="pp-card-location">📍 Logan, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A repeat JSC client used equity from their first property to fund a second purchase in Logan's high-growth corridor, building a multi-property portfolio within two years.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$520,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$640,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+23.1%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$580 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🔁</div>
-          <div class="pp-card-result-text">
-            <strong>$120K equity · second property in 18 months</strong>
-            Built entirely from first property equity
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 8 -->
-    <div class="pp-card" data-state="VIC" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · VIC</div>
-        <div class="pp-card-title">Interstate Diversification</div>
-        <div class="pp-card-location">📍 Ballarat, VIC</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A two-property investor sought VIC exposure without the Melbourne premium. JSC's analysis pointed to Ballarat's infrastructure pipeline and secured a quality property off-market.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$445,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$545,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+22.5%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$490 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🏙️</div>
-          <div class="pp-card-result-text">
-            <strong>Off-market · $100K equity gain</strong>
-            Regional VIC infrastructure play
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 9 -->
-    <div class="pp-card" data-state="QLD" data-type="owner-occupier">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Owner-Occupier · QLD</div>
-        <div class="pp-card-title">First Home Buyer</div>
-        <div class="pp-card-location">📍 Redbank Plains, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A first home buyer was overwhelmed by the process and losing confidence. JSC guided them through every step — from strategy to settlement — and secured a property with immediate equity.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$510,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$625,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+22.5%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">First Home Grant</div>
-            <div class="pp-metric-value">Utilised ✓</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🔑</div>
-          <div class="pp-card-result-text">
-            <strong>$115K equity · First Home Grant utilised</strong>
-            From "lost" to settled in 8 weeks
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 10 -->
-    <div class="pp-card" data-state="WA" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · WA</div>
-        <div class="pp-card-title">High-Growth WA Play</div>
-        <div class="pp-card-location">📍 Armadale, WA</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">With Perth's market running hard, JSC identified a southeastern suburb with infrastructure spending and strong migration trends before the bulk of price growth arrived.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$390,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$545,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+39.7%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$520 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🚀</div>
-          <div class="pp-card-result-text">
-            <strong>$155K equity gain in 20 months</strong>
-            Best performer in the JSC portfolio
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 11 -->
-    <div class="pp-card" data-state="QLD" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · QLD</div>
-        <div class="pp-card-title">Granny Flat Strategy</div>
-        <div class="pp-card-location">📍 Caboolture, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A client on a single income needed a strategy that would rapidly increase cash flow. JSC identified a DA-approved block and coordinated granny flat construction post-settlement.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase + Build</div>
-            <div class="pp-metric-value">$610,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$780,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Combined Yield</div>
-            <div class="pp-metric-value green">7.4%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$870 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🏘️</div>
-          <div class="pp-card-result-text">
-            <strong>Dual income · $870/wk total rent</strong>
-            7.4% gross yield — cashflow positive
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 12 -->
-    <div class="pp-card" data-state="NSW" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · NSW</div>
-        <div class="pp-card-title">Regional Growth Market</div>
-        <div class="pp-card-location">📍 Orange, NSW</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A Sydney couple priced out of capital city investing discovered regional NSW with JSC's help. Orange's lifestyle appeal and strong rental demand made it an ideal entry point.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$420,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$530,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+26.2%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$480 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🌿</div>
-          <div class="pp-card-result-text">
-            <strong>$110K equity · 5.9% yield</strong>
-            Lifestyle market with strong fundamentals
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 13 -->
-    <div class="pp-card" data-state="QLD" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · QLD</div>
-        <div class="pp-card-title">New Townhouse — Off the Plan</div>
-        <div class="pp-card-location">📍 North Lakes, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">An investor wanted to secure a low-maintenance asset with strong depreciation benefits. JSC vetted the developer, assessed the contract, and negotiated inclusions worth $18,000.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$595,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Completed Value</div>
-            <div class="pp-metric-value green">$720,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+21.0%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$620 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🏗️</div>
-          <div class="pp-card-result-text">
-            <strong>$125K equity from completion day</strong>
-            $18K in negotiated inclusions
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 14 -->
-    <div class="pp-card" data-state="SA" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · SA</div>
-        <div class="pp-card-title">Defence Housing Play</div>
-        <div class="pp-card-location">📍 Parafield Gardens, SA</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">Leveraging their knowledge of ADF housing needs, JSC found a property ideally positioned near RAAF Edinburgh — securing a 3-year Defence Housing Australia lease at premium rent.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$480,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$580,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">DHA Yield</div>
-            <div class="pp-metric-value green">6.2%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Lease Term</div>
-            <div class="pp-metric-value">3 Years</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🎖️</div>
-          <div class="pp-card-result-text">
-            <strong>3-year DHA lease · 6.2% guaranteed yield</strong>
-            Zero vacancy risk for lease duration
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 15 -->
-    <div class="pp-card" data-state="QLD" data-type="owner-occupier">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Owner-Occupier · QLD</div>
-        <div class="pp-card-title">Upsizing to Forever Home</div>
-        <div class="pp-card-location">📍 Samford Valley, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A family of five needed more space but didn't want to overpay. JSC ran a concurrent sell/buy strategy, timing both transactions to eliminate bridging finance costs.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$1,050,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$1,280,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+21.9%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Bridging Cost</div>
-            <div class="pp-metric-value">$0</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">✨</div>
-          <div class="pp-card-result-text">
-            <strong>$230K equity · zero bridging finance</strong>
-            Concurrent sell/buy perfectly timed
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 16 -->
-    <div class="pp-card" data-state="QLD" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · QLD</div>
-        <div class="pp-card-title">Renovation Value-Add</div>
-        <div class="pp-card-location">📍 Woodridge, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A client with a small reno budget wanted to manufacture equity. JSC sourced a cosmetically dated property in an improving suburb — a $45K reno delivered $130K in added value.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase + Reno</div>
-            <div class="pp-metric-value">$475,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Post-Reno Value</div>
-            <div class="pp-metric-value green">$605,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Manufactured Equity</div>
-            <div class="pp-metric-value green">$130,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$570 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🔨</div>
-          <div class="pp-card-result-text">
-            <strong>$130K equity manufactured via $45K reno</strong>
-            Instant revaluation on completion
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 17 -->
-    <div class="pp-card" data-state="WA" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · WA</div>
-        <div class="pp-card-title">Mining Town Yield Play</div>
-        <div class="pp-card-location">📍 Kalgoorlie, WA</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">With mining sector conditions favourable, JSC identified a Kalgoorlie property with exceptional yield potential. Client achieved double-digit returns with a tenant secured pre-settlement.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$285,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value green">$650 pw</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Gross Yield</div>
-            <div class="pp-metric-value green">11.8%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Tenant Status</div>
-            <div class="pp-metric-value">Day 1 ✓</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">⛏️</div>
-          <div class="pp-card-result-text">
-            <strong>11.8% gross yield · tenant from day one</strong>
-            Highest yield property in the portfolio
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 18 -->
-    <div class="pp-card" data-state="QLD" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · QLD</div>
-        <div class="pp-card-title">3-Property Portfolio Build</div>
-        <div class="pp-card-location">📍 Greater Brisbane, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A professional couple engaged JSC to build a 3-property portfolio over 36 months. With a clear strategy, equity recycling plan, and JSC's sourcing, they hit the target on time.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Total Portfolio</div>
-            <div class="pp-metric-value">$1.85M</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Total Equity</div>
-            <div class="pp-metric-value green">$420,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Passive Income</div>
-            <div class="pp-metric-value green">$1,640 pw</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Timeline</div>
-            <div class="pp-metric-value">36 months</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🏆</div>
-          <div class="pp-card-result-text">
-            <strong>3 properties · $420K equity · $1,640/wk income</strong>
-            Strategic portfolio build — 36 months
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 19 -->
-    <div class="pp-card" data-state="NSW" data-type="owner-occupier">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Owner-Occupier · NSW</div>
-        <div class="pp-card-title">Downsizer Relocation</div>
-        <div class="pp-card-location">📍 Port Macquarie, NSW</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">A retiring couple sold their Sydney home and wanted coastal lifestyle without overpaying. JSC identified Port Macquarie, ran due diligence on 12 properties, and secured their ideal home in 10 weeks.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Purchase Price</div>
-            <div class="pp-metric-value">$795,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Current Value</div>
-            <div class="pp-metric-value green">$960,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Capital Growth</div>
-            <div class="pp-metric-value green">+20.8%</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Saved vs. List</div>
-            <div class="pp-metric-value">$27,500</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🌊</div>
-          <div class="pp-card-result-text">
-            <strong>$165K equity · coastal lifestyle secured</strong>
-            $27.5K below asking · settled in 10 weeks
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <\!-- CARD 20 -->
-    <div class="pp-card" data-state="QLD" data-type="investor">
-      <div class="pp-card-header">
-        <div class="pp-card-badge">Investor · QLD</div>
-        <div class="pp-card-title">Off-Market Land + Build</div>
-        <div class="pp-card-location">📍 Yarrabilba, QLD</div>
-      </div>
-      <div class="pp-card-body">
-        <p class="pp-card-story">An investor wanted a new build in a growth corridor without developer markups. JSC sourced land off-market, project-managed the build tender, and saved $38K on comparable turnkey packages.</p>
-        <div class="pp-metrics">
-          <div class="pp-metric">
-            <div class="pp-metric-label">Land + Build Cost</div>
-            <div class="pp-metric-value">$620,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Completed Value</div>
-            <div class="pp-metric-value green">$745,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Instant Equity</div>
-            <div class="pp-metric-value green">$125,000</div>
-          </div>
-          <div class="pp-metric">
-            <div class="pp-metric-label">Weekly Rent</div>
-            <div class="pp-metric-value">$650 pw</div>
-          </div>
-        </div>
-        <div class="pp-card-result">
-          <div class="pp-card-result-icon">🏗️</div>
-          <div class="pp-card-result-text">
-            <strong>$125K equity on completion · $38K saved</strong>
-            New build with full depreciation benefits
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div><\!-- /pp-grid -->
-</div><\!-- /pp-section -->
-
-<\!-- ══ CTA ══ -->
-<section class="pp-cta">
-  <h2>Ready to Write Your <span>Success Story?</span></h2>
-  <p>Book a free strategy session with the JSC team. No obligation. Just clarity on what's possible.</p>
-  <a href="/contact-us" class="pp-cta-btn">Book a Free Strategy Session →</a>
-</section>
-
-<\!-- ══ DISCLAIMER ══ -->
-<div class="pp-disclaimer">
-  Past performance is not a guarantee of future results. Property values and rental income may fluctuate. All growth figures represent individual client outcomes and may not reflect typical results. JSC Property Investments is a buyers agency and does not provide financial advice. Please consult a licensed financial adviser before making investment decisions.
 </div>
 
-<script>
-function filterCards(filter, btn) {
-  // Update active button
-  document.querySelectorAll('.pp-filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-stat">
+      <span class="trust-num">45.5%</span>
+      <div class="trust-label">Best Result — 8 Months</div>
+      <div class="trust-sub">Top single-property performance</div>
+    </div>
+    <div class="trust-stat">
+      <span class="trust-num">19.1%</span>
+      <div class="trust-label">Avg 12-Month Growth</div>
+      <div class="trust-sub">Rolling average across all properties</div>
+    </div>
+    <div class="trust-stat">
+      <span class="trust-num">$200K+</span>
+      <div class="trust-label">Avg Dollar Gain</div>
+      <div class="trust-sub">Per property sourced</div>
+    </div>
+    <div class="trust-stat" style="border-right:none;">
+      <span class="trust-num">3.3%</span>
+      <div class="trust-label">Avg Negotiation Discount</div>
+      <div class="trust-sub">Below asking price on settlement</div>
+    </div>
+  </div>
+</div>
 
-  // Filter cards
-  document.querySelectorAll('.pp-card').forEach(card => {
-    if (filter === 'all') {
-      card.style.display = '';
-    } else if (filter === 'investor' || filter === 'owner-occupier') {
-      card.style.display = card.dataset.type === filter ? '' : 'none';
-    } else {
-      card.style.display = card.dataset.state === filter ? '' : 'none';
-    }
-  });
-}
-</script>
+<!-- HOW IT WORKS -->
+<div class="section">
+  <div class="section-head">
+    <div class="section-tag">Our Process</div>
+    <h2>What Working With JSC Actually Looks Like</h2>
+    <p>From your first call to settlement — and well beyond. Here's what changes for you at each stage.</p>
+  </div>
+  <div class="steps">
+    <div class="step-connector"></div>
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>You Get Clarity — Fast</h3>
+      <p>A free 30-minute call where you leave knowing exactly where you stand. Budget, realistic targets, and whether JSC is the right fit. No pressure. No pitch. Just straight answers.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>You Get a Strategy, Not Just a Search</h3>
+      <p>A free Deep Dive Strategy Session where your Property Coach maps your full financial picture and builds a property strategy around it. Most clients walk away having already learned more than months of DIY research. Still no fee, no commitment.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>You Know Exactly What You're Buying — Before You Look</h3>
+      <p>We build a precise property brief around your goals — the right suburb profile, growth fundamentals, and deal criteria. You stop looking at everything and start looking only at what's worth your time.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>You See Opportunities Other Buyers Never Find</h3>
+      <p>We search on-market and off-market, filtering everything against your brief. You only hear about a property when it genuinely stacks up — no noise, no tyre-kicking, no wasted weekends at inspections.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <h3>You Buy Below What Everyone Else Pays</h3>
+      <p>We negotiate with data, comparable sales, and zero emotional attachment. Most JSC clients secure below the asking price — that day-one equity is your buffer and your head start on growth.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">6</div>
+      <h3>You Keep Growing — With a Plan</h3>
+      <p>We coordinate everything through to settlement, then review your portfolio every six months with real valuations and a clear forward strategy. The relationship doesn't end when the deal does.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA AFTER HOW IT WORKS -->
+<div style="text-align:center;padding:48px 24px;background:#0b0f1a;border-top:1px solid rgba(255,255,255,0.06);">
+  <p style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Ready to see the process in action?</p>
+  <a href="contact.html" class="btn-primary">Book a Free Discovery Call →</a>
+</div>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip-wrap" style="overflow:hidden;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);">
+  <div class="photo-grid" style="display:grid;grid-template-columns:2fr 1fr 1fr;height:600px;gap:3px;">
+    <div style="overflow:hidden;position:relative;">
+      <img src="https://drive.google.com/thumbnail?id=1P0aQbo0cnfEWpTLJq9V-A5KHUD13Kg2-&sz=w1920" alt="Simon and Jacob with a client" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 50%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:20px;left:24px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);">Client Consultation</div>
+      </div>
+    </div>
+    <div style="overflow:hidden;position:relative;">
+      <img src="https://drive.google.com/thumbnail?id=1IuWvjI7TdG6PHte_RBvpAcyI0TrmafmN&sz=w1920" alt="Simon deep in market research" style="width:100%;height:100%;object-fit:cover;object-position:50% 0%;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:16px;left:16px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">Due Diligence</div>
+    </div>
+    <div style="overflow:hidden;position:relative;">
+      <img src="https://drive.google.com/thumbnail?id=1D4cCxBoulNk2qUELEzw7rm8RxlYl_5LL&sz=w1920" alt="Simon and Jacob at an awards night" style="width:100%;height:100%;object-fit:cover;object-position:30% 10%;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:16px;left:16px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">Award Winners</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY JSC -->
+<div class="section dark-bg">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-tag">Why Us</div>
+      <h2>The JSC Difference</h2>
+      <p>Most buyers agents have a conflict of interest they won't tell you about. Here's what makes JSC structurally different — and why it matters.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>Veteran-Owned, Integrity-Led</h3>
+        <p>JSC was co-founded by two brothers who served. Simon spent 11 years in the Australian Army — Helicopter Mechanic, Combat Fitness Leader, Combat First Aider — discharging as a Corporal in 2022. Jacob served in the Royal Australian Air Force before leaving to pursue financial freedom through property, which he's been actively investing in since 2015. The discipline, straight-talking, and people-first values from their service run through every client engagement.</p>
+      </div>
+      <div class="why-card">
+        <h3>No Kickbacks. No Commissions. No BS.</h3>
+        <p>Some operators in this industry receive $30,000 or more from builders and developers for every property they recommend — then present it as independent guidance. Think about what that does to their advice. JSC has never accepted a dollar from any developer, builder, or vendor. Not once. Our only income is the fixed fee you pay us — so the only outcome we're optimising for is yours.</p>
+      </div>
+      <div class="why-card">
+        <h3>The Capital Compounder™ Strategy</h3>
+        <p>Our proprietary acquisition framework identifies established properties in high-growth corridors before the market catches up — often off-market. It's a repeatable, systematic process built on 80-point due diligence and 100+ active agent relationships across QLD.</p>
+      </div>
+      <div class="why-card">
+        <h3>Below Market Value — Always the Target</h3>
+        <p>We negotiate with data, comparable sales, and no emotional attachment. Most JSC clients purchase below the asking price — sometimes significantly. That instant equity is your buffer, your safety net, and your head start on growth.</p>
+      </div>
+      <div class="why-card">
+        <h3>A Track Record You Can Verify</h3>
+        <p>Zero losses. 30%+ average capital growth across the portfolio — and that figure includes properties we've only just settled, which drags the average down significantly. The true long-term number is materially higher. We publish our results because no competitor can manufacture this record.</p>
+      </div>
+      <div class="why-card">
+        <h3>Our Business Model Runs on Your Results</h3>
+        <p>Our only incentive is to find you the very best performing property we can — because a client who builds real wealth comes back. Many JSC clients have come back to buy multiple properties with us over time, using equity from each to fund the next. That's the business model: do excellent work, earn repeat clients.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA AFTER WHY JSC -->
+<div style="text-align:center;padding:48px 24px;background:#0b0f1a;border-top:1px solid rgba(255,255,255,0.06);">
+  <p style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Want results like these?</p>
+  <a href="contact.html" class="btn-primary">Book a Free Discovery Call →</a>
+</div>
+
+<!-- TEAM QUOTE BANNER -->
+<div style="position:relative;overflow:hidden;min-height:420px;display:flex;align-items:center;">
+  <div style="position:absolute;inset:0;overflow:hidden;">
+    <img src="https://drive.google.com/thumbnail?id=19sraTX45Q_NiPFP6EpaGZbWBbIaIMfdj&sz=w1920" alt="Investment property secured by JSC buyers agent Queensland" style="position:absolute;top:50%;left:50%;transform:translate(-35%,-50%);min-width:150%;min-height:110%;width:auto;height:auto;filter:brightness(0.35);">
+  </div>
+  <div style="position:relative;z-index:1;max-width:900px;margin:0 auto;padding:60px 40px;text-align:center;">
+    <div style="font-size:clamp(20px,3vw,32px);font-weight:800;color:#fff;line-height:1.35;margin-bottom:20px;">"We built JSC because everyday Australians deserve the same professional representation that vendors get — without the kickbacks, without the percentage fees, and without someone pocketing $30,000 from a developer to steer you toward a project that works for them, not you. That ends the moment you work with us."</div>
+    <div style="font-size:13px;font-weight:700;color:var(--green);letter-spacing:2px;text-transform:uppercase;">— Simon & Jacob Camilleri, Co-Founders</div>
+  </div>
+</div>
+
+<!-- RESULTS SNAPSHOT -->
+<div class="section">
+  <div class="section-head">
+    <div class="section-tag">Client Results</div>
+    <h2>The Track Record Speaks For Itself</h2>
+    <p>Every result below is a real JSC client, a real property, and a real verified number. No projections. No marketing spin.</p>
+  </div>
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="rc-top">
+        <div>
+          <div class="rc-name">Brock M.</div>
+          <div class="rc-loc">📍 Adelaide, SA · Oct 2021</div>
+          <span class="rc-badge inv" style="margin-top:8px;display:inline-block">Investor</span>
+        </div>
+        <div class="rc-growth">+64%</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-stat"><div class="rc-stat-label">Purchase Price</div><div class="rc-stat-val">$500K</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">Current Value</div><div class="rc-stat-val up">$820K</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">Equity Created</div><div class="rc-stat-val up">$320,000</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">BMV Saving</div><div class="rc-stat-val" style="color:var(--gold)">$40,000</div></div>
+      </div>
+    </div>
+    <div class="result-card">
+      <div class="rc-top">
+        <div>
+          <div class="rc-name">Jack H.</div>
+          <div class="rc-loc">📍 Moreton Bay · Oct 2023</div>
+          <span class="rc-badge oo" style="margin-top:8px;display:inline-block">Owner-Occupier</span>
+        </div>
+        <div class="rc-growth" style="color:var(--gold)">+51%</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-stat"><div class="rc-stat-label">Purchase Price</div><div class="rc-stat-val">$850K</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">Current Value</div><div class="rc-stat-val up">$1.28M</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">Equity Created</div><div class="rc-stat-val up">$430,000</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">BMV Saving</div><div class="rc-stat-val" style="color:var(--gold)">$100,000</div></div>
+      </div>
+    </div>
+    <div class="result-card">
+      <div class="rc-top">
+        <div>
+          <div class="rc-name">Georgina H.</div>
+          <div class="rc-loc">📍 Ipswich · Aug 2025</div>
+          <span class="rc-badge inv" style="margin-top:8px;display:inline-block">Investor</span>
+        </div>
+        <div class="rc-growth">+46%</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-stat"><div class="rc-stat-label">Purchase Price</div><div class="rc-stat-val">$550K</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">Current Value</div><div class="rc-stat-val up">$800K</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">Equity Created</div><div class="rc-stat-val up">$250,000</div></div>
+        <div class="rc-stat"><div class="rc-stat-label">Hold Period</div><div class="rc-stat-val">8 months</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="results-cta">
+    <a href="portfolio-performance.html">Explore our client portfolio →</a>
+  </div>
+</div>
+
+<!-- CTA AFTER RESULTS SNAPSHOT -->
+<div style="text-align:center;padding:48px 24px;background:#0b0f1a;border-top:1px solid rgba(255,255,255,0.06);">
+  <p style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Your result could be next.</p>
+  <a href="contact.html" class="btn-primary">Book a Free Discovery Call →</a>
+</div>
+
+<!-- WHO WE HELP -->
+<div class="section dark-bg">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-tag">Who We Help</div>
+      <h2>Is JSC Right For You?</h2>
+      <p>We work with two types of clients. Both get the same level of service, expertise, and commitment.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who-card inv-card">
+        <div class="who-icon">📈</div>
+        <h3>Property Investors</h3>
+        <p>You want to build wealth through property — but you don't have the time, knowledge, or access to consistently find the right deals. We do.</p>
+        <ul class="who-list">
+          <li>First-time investors who want to start right</li>
+          <li>Experienced investors looking to scale their portfolio</li>
+          <li>SMSF investors seeking compliant, high-growth property</li>
+          <li>Interstate investors wanting QLD exposure without the legwork</li>
+          <li>Anyone who's been burned before and wants to do it properly this time</li>
+        </ul>
+      </div>
+      <div class="who-card oo-card">
+        <div class="who-icon">🏡</div>
+        <h3>Owner-Occupiers</h3>
+        <p>You're buying a home — the biggest financial decision of your life. You deserve expert representation in your corner, not just the Sales Agent.</p>
+        <ul class="who-list">
+          <li>First home buyers navigating an overwhelming market</li>
+          <li>Families upsizing or downsizing who want the right home, not just any home</li>
+          <li>Buyers who've lost at auction and need a smarter strategy</li>
+          <li>Professionals too busy to search and negotiate properly</li>
+          <li>Anyone wanting to secure their dream home below market value</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO TESTIMONIALS -->
+<div class="section dark-bg">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="section-tag">Hear From Our Clients</div>
+      <h2>Real Clients. Real Results. On Camera.</h2>
+      <p>No scripts, no actors. Just JSC clients talking about their experience.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+      <!-- Jack -->
+      <div style="border-radius:14px;overflow:hidden;background:var(--dark3);border:1px solid var(--border);">
+        <div style="position:relative;padding-top:177.7%;cursor:pointer;" onclick="(function(el){var ifr=document.createElement('iframe');ifr.src='https://drive.google.com/file/d/1hvCdCdHeVXma-h9xqSBWYq9G5mCzugsb/preview';ifr.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:none;';ifr.allow='autoplay';ifr.allowFullscreen=true;el.innerHTML='';el.appendChild(ifr);})(this)">
+          <img src="https://drive.google.com/thumbnail?id=1-KLa1pU2LlYhtSkqizgPn-A38YS12HP8&sz=w1200" alt="Jack" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.1) 60%);pointer-events:none;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 18px;text-align:left;">
+            <div style="font-size:12px;color:#2ecc71;margin-bottom:6px;">★★★★★</div>
+            <div style="font-size:13px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.5;margin-bottom:12px;">"Simon and Jacob fought hard for us — we got our dream home $75K below asking."</div>
+          </div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(46,204,113,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 32px rgba(46,204,113,0.5);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><polygon points="8,5 19,12 8,19"/></svg>
+          </div>
+        </div>
+        <div style="padding:14px 18px;"><div style="font-weight:700;font-size:14px;color:#fff;">Jack</div><div style="font-size:12px;color:var(--muted);margin-top:2px;">ADF Member · Owner-Occupier</div></div>
+      </div>
+      <!-- Lachlan -->
+      <div style="border-radius:14px;overflow:hidden;background:var(--dark3);border:1px solid var(--border);">
+        <div style="position:relative;padding-top:177.7%;cursor:pointer;" onclick="(function(el){var ifr=document.createElement('iframe');ifr.src='https://drive.google.com/file/d/1MVYbXUwws7LkbxY9mEADcJGSR-JTyERv/preview';ifr.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:none;';ifr.allow='autoplay';ifr.allowFullscreen=true;el.innerHTML='';el.appendChild(ifr);})(this)">
+          <img src="https://drive.google.com/thumbnail?id=1A_SFCvPg7HSUVvatDz7nK_hKvytU2Wlw&sz=w1200" alt="Lachlan" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.1) 60%);pointer-events:none;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 18px;text-align:left;">
+            <div style="font-size:12px;color:#2ecc71;margin-bottom:6px;">★★★★★</div>
+            <div style="font-size:13px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.5;margin-bottom:12px;">"I handed it over to JSC and they delivered. Property secured, stress-free."</div>
+          </div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(46,204,113,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 32px rgba(46,204,113,0.5);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><polygon points="8,5 19,12 8,19"/></svg>
+          </div>
+        </div>
+        <div style="padding:14px 18px;"><div style="font-weight:700;font-size:14px;color:#fff;">Lachlan</div><div style="font-size:12px;color:var(--muted);margin-top:2px;">Busy Professional · First Investment</div></div>
+      </div>
+      <!-- Brock & Bree -->
+      <div style="border-radius:14px;overflow:hidden;background:var(--dark3);border:1px solid var(--border);">
+        <div style="position:relative;padding-top:177.7%;cursor:pointer;" onclick="(function(el){var ifr=document.createElement('iframe');ifr.src='https://drive.google.com/file/d/1Taa0JpiEYXjxOaDhR_8M6uKibkIgl_So/preview';ifr.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:none;';ifr.allow='autoplay';ifr.allowFullscreen=true;el.innerHTML='';el.appendChild(ifr);})(this)">
+          <img src="https://drive.google.com/thumbnail?id=10lI-A-YS1NYsmCotcowT8MiBoibme94D&sz=w1200" alt="Brock &amp; Bree" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.1) 60%);pointer-events:none;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 18px;text-align:left;">
+            <div style="font-size:12px;color:#f0b429;margin-bottom:6px;">★★★★★</div>
+            <div style="font-size:13px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.5;margin-bottom:12px;">"Over $300K in equity in 2 years. JSC changed how we think about wealth."</div>
+          </div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(46,204,113,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 32px rgba(46,204,113,0.5);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><polygon points="8,5 19,12 8,19"/></svg>
+          </div>
+        </div>
+        <div style="padding:14px 18px;"><div style="font-weight:700;font-size:14px;color:#fff;">Brock &amp; Bree</div><div style="font-size:12px;color:var(--muted);margin-top:2px;">Experienced Investors · 40% growth in 2 years</div></div>
+      </div>
+      <!-- Trav & Amanda -->
+      <div style="border-radius:14px;overflow:hidden;background:var(--dark3);border:1px solid var(--border);">
+        <div style="position:relative;padding-top:177.7%;cursor:pointer;" onclick="(function(el){var ifr=document.createElement('iframe');ifr.src='https://drive.google.com/file/d/1bqsO9lMqR80LITuBHZVz6_waOun15LHc/preview';ifr.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:none;';ifr.allow='autoplay';ifr.allowFullscreen=true;el.innerHTML='';el.appendChild(ifr);})(this)">
+          <img src="https://drive.google.com/thumbnail?id=1bqsO9lMqR80LITuBHZVz6_waOun15LHc&sz=w1200" alt="Trav &amp; Amanda" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.1) 60%);pointer-events:none;"></div>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 18px;text-align:left;">
+            <div style="font-size:12px;color:#2ecc71;margin-bottom:6px;">★★★★★</div>
+            <div style="font-size:13px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.5;margin-bottom:12px;">"We didn't think we could get into the market. JSC made it happen."</div>
+          </div>
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(46,204,113,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 32px rgba(46,204,113,0.5);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><polygon points="8,5 19,12 8,19"/></svg>
+          </div>
+        </div>
+        <div style="padding:14px 18px;"><div style="font-weight:700;font-size:14px;color:#fff;">Trav &amp; Amanda</div><div style="font-size:12px;color:var(--muted);margin-top:2px;">First Home Buyers · QLD</div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="contact.html" class="btn-primary" style="font-size:14px;padding:13px 28px;">Watch the Full Testimonial Mashup →</a>
+    </div>
+  </div>
+</div>
+
+<!-- TEXT TESTIMONIALS -->
+<div class="section">
+  <div class="section-head">
+    <div class="section-tag">Google Reviews</div>
+    <h2>What Our Clients Say</h2>
+    <p style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      Straight from Google. No edits, no spin.
+      <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(46,204,113,0.1);border:1px solid rgba(46,204,113,0.25);border-radius:100px;padding:4px 12px;font-size:12px;font-weight:700;color:#2ecc71;">★★★★★ 5.0 · 38 Google Reviews</span>
+    </p>
+  </div>
+  <div class="testi-grid">
+    <!-- 1 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Can't go into buying a home or investing in properties without help. This is where Simon and Jacob come in. By being knowledgeable and understanding they make the process enjoyable and less stressful. Will recommend JSC to anyone that wants to buy their forever home or next property, even if the portfolio is 2 or 10 houses deep. I've learnt a lot from them and will definitely be back. Cheers!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">C</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Cory</div>
+          <div class="testi-detail">Property Investor</div>
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Simon made the process feel easy and pressure-free from the very first conversation. Jacob then took over the buyer's agent side and was fantastic throughout — weekly updates, attending inspections, thorough reports. When issues arose pre-settlement, Jacob stepped in immediately and resolved everything at no extra cost. Buying our first investment property with JSC was an exceptional experience.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">F</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Flynn Kelly</div>
+          <div class="testi-detail">Google Local Guide · First Investment Property</div>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>I had the pleasure of assisting JSC Property Investments with their investors in QLD. The experience was outstanding. Communication throughout was seamless. Jacob was incredibly easy to deal with — professional and responsive. I would highly recommend them to anyone seeking a buyers agent.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">J</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Jessica Roberts</div>
+          <div class="testi-detail">Property Professional · QLD</div>
+        </div>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Both of us are time-poor in our professional careers and juggling three kids — we needed someone we could trust. Simon and Jacob stood out immediately. From the very first conversation, Simon made the process feel easy and pressure-free. Jacob then handled everything seamlessly — inspections, agent negotiations, weekly updates. We can't recommend JSC highly enough to anyone looking for reliable and trustworthy buyer's agents in Brisbane.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">M</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Mike & Kris Tyssen</div>
+          <div class="testi-detail">First Investment Property · Brisbane</div>
+        </div>
+      </div>
+    </div>
+    <!-- 5 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Our experience with JSC Property Investments was nothing short of outstanding. Simon and Jacob provided exceptional guidance and support throughout the entire property buying journey. Their deep market knowledge, attention to detail, and genuine commitment to our goals gave us complete confidence. We felt valued as clients, and their professionalism, transparency, and dedication made the entire process seamless and stress-free.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">T</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Trev A</div>
+          <div class="testi-detail">Investment Property Buyer</div>
+        </div>
+      </div>
+    </div>
+    <!-- 6 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Simon and Jacob have helped me purchase two properties, and I couldn't be happier with the experience. They are both incredibly knowledgeable and provided excellent advice throughout the process. Their professionalism and expertise made everything smooth and stress-free. I highly recommend JSC Property Investment!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">C</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Casey Paessler</div>
+          <div class="testi-detail">Repeat Investor · QLD</div>
+        </div>
+      </div>
+    </div>
+    <!-- 7 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Jacob was professional, transparent, and genuinely invested in helping me make smart property decisions. He took the time to explain every step of the process, provided clear market insights, and delivered great results. Communication was always prompt and honest, which made the whole experience stress-free. I highly recommend them.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">C</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Claire Gregory</div>
+          <div class="testi-detail">Google Local Guide · Investor</div>
+        </div>
+      </div>
+    </div>
+    <!-- 8 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Working with Jacob from JSC Property Investments was an absolute pleasure from start to finish! His professionalism, clear communication, and attention to detail made the entire process seamless. He was incredibly proactive, keeping me updated every step of the way. The transaction was not only efficient but enjoyable thanks to his collaborative and approachable nature. Highly recommend Jacob to anyone looking for a top-notch buyer's agent!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Selene Bruynzeels</div>
+          <div class="testi-detail">Investment Property · QLD</div>
+        </div>
+      </div>
+    </div>
+    <!-- 9 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>I had an incredible experience with JSC Property Investments! Jacob was fantastic to work with, knowledgeable, friendly, down-to-earth, and genuinely had my best interests at heart throughout the process. Highly recommend.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">Z</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Zane Zahr</div>
+          <div class="testi-detail">Investment Property Buyer</div>
+        </div>
+      </div>
+    </div>
+    <!-- 10 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Simon and Jacob are a couple of dedicated and genuine brothers that know the local property market. They fit around our travel plans, listened to exactly what we wanted — budget, lifestyle, tenant profile — and showed us half a dozen properties with huge growth potential. If you're after a buyers agency that will look after your needs, don't hesitate to contact JSC. You will not be disappointed. Thanks for all your help guys.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">J</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Jason Buttigieg</div>
+          <div class="testi-detail">Investment Property · Brisbane</div>
+        </div>
+      </div>
+    </div>
+    <!-- 11 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Simon was really easy to talk to, down-to-earth, and clearly knew what he was talking about. Took the time to listen and understand what we were after and explained everything in a way that actually made sense to us. I walked away feeling confident and excited for the next steps. Super impressed.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">B</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Bodie Blood</div>
+          <div class="testi-detail">Property Strategy Consult</div>
+        </div>
+      </div>
+    </div>
+    <!-- 12 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>If you're looking for a reliable and dedicated buyers agent look no further! I've had the pleasure of working with JSC on many occasions and see first-hand the detail, care and planning they undertake when securing property for clients. They're also great communicators. Highly recommend!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">J</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Jarryd Kirchner</div>
+          <div class="testi-detail">Repeat Client · Multiple Properties</div>
+        </div>
+      </div>
+    </div>
+    <!-- 13 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>The team at JSC are extremely efficient and knowledgeable. Made the experience feel smooth and easy.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Andreas Siasios</div>
+          <div class="testi-detail">Property Investor</div>
+        </div>
+      </div>
+    </div>
+    <!-- 14 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>The JSC team have provided valuable advice and cleared up so many of my doubts and concerns around property investing. Highly recommend! Thank you.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">C</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Cassandra B</div>
+          <div class="testi-detail">Property Investing Client</div>
+        </div>
+      </div>
+    </div>
+    <!-- 15 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>Jacob was a pleasure to work with, always kept me updated and had a great range of knowledge. Thanks again.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">K</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Kira Keam</div>
+          <div class="testi-detail">Investment Property Buyer</div>
+        </div>
+      </div>
+    </div>
+    <!-- 16 -->
+    <div class="testi">
+      <div class="testi-quote">"</div>
+      <p>I am extremely pleased with the advice and services provided by JSC Property! Couldn't have found such a great property and great deal without them. Highly recommend!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">C</div>
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <div class="testi-name">Carrie Mott</div>
+          <div class="testi-detail">Investment Property Buyer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:36px;">
+    <a href="https://www.google.com/maps/place/JSC+Property+Investments" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:#7a8096;font-size:13px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.1);padding:10px 20px;border-radius:8px;transition:all 0.2s;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.color='#7a8096';this.style.borderColor='rgba(255,255,255,0.1)'">
+      View all 38 reviews on Google →
+    </a>
+  </div>
+</div>
+
+<!-- CTA AFTER TESTIMONIALS -->
+<div style="text-align:center;padding:48px 24px;background:#0b0f1a;border-top:1px solid rgba(255,255,255,0.06);">
+  <p style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:16px;">Heard enough? Let's talk.</p>
+  <a href="contact.html" class="btn-primary">Book a Free Discovery Call →</a>
+</div>
+
+<!-- AREAS WE SERVE -->
+<section style="background:#0b0f1a;padding:72px 24px;border-top:1px solid rgba(255,255,255,0.06);">
+  <div style="max-width:1100px;margin:0 auto;text-align:center;">
+    <p style="font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--green);margin-bottom:14px;">Where We Work</p>
+    <h2 style="font-size:clamp(24px,3.5vw,36px);font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px;">Buyers Agents Across QLD & SA</h2>
+    <p style="color:var(--muted);font-size:16px;max-width:580px;margin:0 auto 48px;line-height:1.7;">Deep local knowledge across both states. We know which pockets outperform, which to avoid, and why.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:820px;margin:0 auto;text-align:left;">
+      <div style="background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:28px 32px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+          <span style="background:var(--green-glow);border:1px solid rgba(46,204,113,0.3);border-radius:8px;padding:6px 12px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">QLD</span>
+          <span style="font-size:15px;font-weight:700;color:#fff;">Queensland</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Brisbane</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Moreton Bay</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Logan</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Ipswich</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Gold Coast</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Sunshine Coast</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Redlands</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Toowoomba</span>
+        </div>
+      </div>
+      <div style="background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:28px 32px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+          <span style="background:var(--green-glow);border:1px solid rgba(46,204,113,0.3);border-radius:8px;padding:6px 12px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">SA</span>
+          <span style="font-size:15px;font-weight:700;color:#fff;">South Australia</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Adelaide</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Norwood</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Prospect</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Glenelg</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Tea Tree Gully</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Salisbury</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Port Adelaide</span>
+          <span style="background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:13px;color:var(--muted);">Mount Barker</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Your Shortcut To Freedom<br><span class="grad">Starts With One Call.</span></h2>
+  <p>Book a free Discovery Call. We'll tell you exactly what's possible for your situation — no obligation, no pressure, no sales pitch. Just straight talk from two people who've done this before.</p>
+  <a href="contact.html" class="btn-primary" style="position:relative">Book a Free Discovery Call →</a>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><span class="logo-accent">JSC</span> Property Investments</div>
+        <p>Australia's trusted buyers agency for investors and owner-occupiers. Specialists in QLD &amp; SA markets.</p>
+        <a href="mailto:info@jscpropertyinvestments.com.au">info@jscpropertyinvestments.com.au</a>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="portfolio-performance.html">Portfolio Results</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-nav">
+        <h4>Our Markets</h4>
+        <a href="#">Moreton Bay, QLD</a>
+        <a href="#">Ipswich, QLD</a>
+        <a href="#">Logan, QLD</a>
+        <a href="#">Brisbane, QLD</a>
+        <a href="#">Adelaide, SA</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 JSC Property Investments. Licensed Buyers Agent. All rights reserved.</div>
+      <div class="footer-copy">Past performance is not indicative of future results. Not financial advice.</div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

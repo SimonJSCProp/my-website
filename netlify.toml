@@ -1,0 +1,29 @@
+[build]
+  publish = "."
+
+# Security + performance headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Redirect bare domain to www (or vice versa — Netlify handles this automatically)
+# Contact form thank-you alias
+[[redirects]]
+  from = "/thank-you"
+  to = "/contact.html?submitted=1"
+  status = 301
+
+# 404 fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
