@@ -137,7 +137,7 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 
 /* CTA */
 .cta { background: linear-gradient(160deg, #131d30 0%, #0f1e20 100%); border-top: 1px solid var(--border); padding: 90px 24px; text-align: center; position: relative; overflow: hidden; }
-.cta::before { content: ''; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 500px; background: radial-gradient(ellipse, rgba(46,204,113,0.10) 0%, transparent 70%); }
+.cta::before { content: ''; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 500px; background: radial-gradient(ellipse, rgba(46,204,113,0.10) 0%, transparent 70%); pointer-events: none; }
 .cta h2 { font-size: clamp(30px, 4vw, 50px); font-weight: 900; letter-spacing: -1px; margin-bottom: 16px; position: relative; }
 .cta h2 .grad { background: linear-gradient(135deg, #2ecc71, #27ae60); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .cta p { font-size: 17px; color: var(--muted); max-width: 480px; margin: 0 auto 40px; position: relative; }
@@ -641,11 +641,11 @@ body {
       <div class="card-body">
         <div class="metrics">
           <div class="metric"><div class="metric-label">Purchase Price</div><div class="metric-val">$550,000</div></div>
-          <div class="metric"><div class="metric-label">Current Value</div><div class="metric-val up">$620,000</div></div>
-          <div class="metric"><div class="metric-label">Total Growth</div><div class="metric-val up">+12.7%</div></div>
-          <div class="metric"><div class="metric-label">Equity Created</div><div class="metric-val up">$70,000</div></div>
+          <div class="metric"><div class="metric-label">Current Value</div><div class="metric-val up">$700,000</div></div>
+          <div class="metric"><div class="metric-label">Total Growth</div><div class="metric-val up">+27.3%</div></div>
+          <div class="metric"><div class="metric-label">Equity Created</div><div class="metric-val up">$150,000</div></div>
         </div>
-        <div class="result-bar"><div class="result-icon">🏗️</div><div class="result-text"><strong>$70K equity · 3rd property with JSC in 23 months</strong>Portfolio compounding strategy in action</div></div>
+        <div class="result-bar"><div class="result-icon">🏗️</div><div class="result-text"><strong>$150K equity · 3rd property with JSC in 23 months</strong>Portfolio compounding strategy in action</div></div>
       </div>
     </div>
 

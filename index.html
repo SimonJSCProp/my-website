@@ -285,9 +285,12 @@ body {
   .photo-grid > div { height: 220px; }
   .photo-grid > div:not(:first-child) { display: block !important; }
 
-  /* Testimonials: ensure single column, no overflow */
-  .testi-grid { grid-template-columns: 1fr !important; }
-  .testi { padding: 22px 20px; }
+  /* Testimonials: single column, reduced padding */
+  .testi-grid { display: grid !important; grid-template-columns: 1fr !important; }
+  .testi { padding: 20px 16px; }
+  .testi p { font-size: 13px; }
+  .testi-quote { font-size: 24px; }
+  .testi-stars { letter-spacing: 1px; }
 
   /* Sections: tighter padding */
   .section { padding: 56px 16px !important; }
@@ -484,12 +487,12 @@ body {
       </div>
     </div>
     <div style="overflow:hidden;position:relative;">
-      <img src="https://drive.google.com/thumbnail?id=1IuWvjI7TdG6PHte_RBvpAcyI0TrmafmN&sz=w1920" alt="Simon deep in market research" style="width:100%;height:100%;object-fit:cover;object-position:50% 0%;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      <img src="https://drive.google.com/thumbnail?id=1IuWvjI7TdG6PHte_RBvpAcyI0TrmafmN&sz=w1920" alt="Simon deep in market research" style="width:100%;height:100%;object-fit:cover;object-position:50% 78%;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;bottom:16px;left:16px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">Due Diligence</div>
     </div>
     <div style="overflow:hidden;position:relative;">
-      <img src="https://drive.google.com/thumbnail?id=1D4cCxBoulNk2qUELEzw7rm8RxlYl_5LL&sz=w1920" alt="Simon and Jacob at an awards night" style="width:100%;height:100%;object-fit:cover;object-position:30% 10%;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      <img src="https://drive.google.com/thumbnail?id=1D4cCxBoulNk2qUELEzw7rm8RxlYl_5LL&sz=w1920" alt="Simon and Jacob at an awards night" style="width:100%;height:100%;object-fit:cover;object-position:30% 72%;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;bottom:16px;left:16px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">Award Winners</div>
     </div>
