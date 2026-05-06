@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Borrowing Capacity Calculator | JSC Property Investments</title>
+  <meta name="description" content="Find out how much you can borrow with JSC Property Investments' free borrowing capacity calculator. Powered by Quickli." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dark: #0f1117; --dark2: #161c28; --dark3: #1b2236; --dark4: #1f2a44;
+      --green: #2ecc71; --green-dark: #27ae60; --green-glow: rgba(46,204,113,0.15);
+      --gold: #f0b429; --border: rgba(255,255,255,0.08);
+      --text: #e8eaf0; --muted: #7a8096;
+    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; }
+
+    body {
+      background-color: var(--dark);
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(46,204,113,0.13) 0%, transparent 60%),
+        radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 100% 100%, 32px 32px;
+      background-attachment: fixed;
+    }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.96); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); padding: 0 24px; }
+    .nav-inner { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-size: 17px; font-weight: 800; color: #fff; text-decoration: none; }
+    .logo-accent { color: var(--green); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .nav-cta { background: var(--green) !important; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 13px !important; }
+    .nav-cta:hover { opacity: 0.88; }
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 101; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 720px) {
+      .hamburger { display: flex; }
+      .nav-links { display: none !important; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: rgba(15,17,23,0.98); backdrop-filter: blur(14px); padding: 8px 0 16px; border-bottom: 1px solid var(--border); gap: 0 !important; z-index: 99; }
+      .nav-links.open { display: flex !important; }
+      .nav-links a { padding: 14px 24px !important; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text) !important; display: block !important; }
+      .nav-links a.nav-cta { margin: 8px 24px 0; text-align: center; border-bottom: none; border-radius: 8px; }
+    }
+
+    /* HERO */
+    .page-hero { background: linear-gradient(160deg, #0c0f1c 0%, #111a2e 40%, #0a1a16 100%); padding: 80px 24px 72px; text-align: center; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
+    .page-hero::after { content: ''; position: absolute; bottom: -80px; right: -100px; width: 500px; height: 400px; background: radial-gradient(ellipse, rgba(46,204,113,0.07) 0%, transparent 70%); pointer-events: none; }
+    .page-hero::before { content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 700px; height: 500px; background: radial-gradient(ellipse, rgba(46,204,113,0.18) 0%, transparent 65%); pointer-events: none; }
+    .page-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--green-glow); border: 1px solid rgba(46,204,113,0.3); color: var(--green); font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 7px 16px; border-radius: 100px; margin-bottom: 24px; }
+    .page-hero h1 { font-size: clamp(32px, 5vw, 58px); font-weight: 900; letter-spacing: -1.5px; margin-bottom: 18px; line-height: 1.08; }
+    .grad { background: linear-gradient(135deg, #2ecc71 0%, #27ae60 50%, #1a9650 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .page-hero p { font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 auto; line-height: 1.75; }
+
+    /* WIDGET SECTION */
+    .widget-section { max-width: 960px; margin: 0 auto; padding: 72px 24px 88px; }
+
+    .widget-intro { text-align: center; margin-bottom: 48px; }
+    .section-tag { display: inline-block; background: var(--green-glow); border: 1px solid rgba(46,204,113,0.25); color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
+    .widget-intro h2 { font-size: clamp(22px, 3vw, 36px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 14px; }
+    .widget-intro p { font-size: 15px; color: var(--muted); max-width: 540px; margin: 0 auto; line-height: 1.8; }
+
+    .widget-card { background: var(--dark2); border: 1px solid rgba(46,204,113,0.15); border-radius: 20px; overflow: hidden; }
+    .widget-card-header { padding: 28px 36px; background: linear-gradient(135deg, rgba(46,204,113,0.08), rgba(46,204,113,0.03)); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 14px; }
+    .widget-card-header .icon { font-size: 28px; }
+    .widget-card-header h3 { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 3px; }
+    .widget-card-header p { font-size: 12px; color: var(--muted); }
+    .widget-card-body { padding: 36px; }
+
+    .quickli-form { width: 100%; }
+
+    /* DISCLAIMER */
+    .disclaimer { margin-top: 20px; padding: 16px 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; }
+    .disclaimer p { font-size: 11.5px; color: var(--muted); line-height: 1.65; }
+    .disclaimer p strong { color: var(--text); }
+
+    /* TRUST STRIP */
+    .trust-strip { max-width: 960px; margin: 0 auto; padding: 0 24px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .trust-card { background: var(--dark2); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; text-align: center; }
+    .trust-card .trust-icon { font-size: 28px; margin-bottom: 12px; }
+    .trust-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: #fff; }
+    .trust-card p { font-size: 12px; color: var(--muted); line-height: 1.65; }
+    @media (max-width: 640px) { .trust-strip { grid-template-columns: 1fr; } }
+
+    /* CTA */
+    .cta-section { position: relative; overflow: hidden; background: linear-gradient(160deg, #131d30 0%, #0f1e20 100%); border-top: 1px solid var(--border); padding: 96px 24px; text-align: center; }
+    .cta-section::before { content: ''; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 700px; height: 600px; background: radial-gradient(ellipse, rgba(46,204,113,0.10) 0%, transparent 70%); }
+    .cta-section h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -1px; margin-bottom: 16px; position: relative; }
+    .cta-section p { font-size: 17px; color: var(--muted); max-width: 480px; margin: 0 auto 40px; position: relative; }
+    .btn-primary { display: inline-block; background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; font-size: 16px; font-weight: 800; padding: 17px 40px; border-radius: 10px; text-decoration: none; box-shadow: 0 8px 32px rgba(46,204,113,0.35); transition: transform 0.2s, box-shadow 0.2s; position: relative; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(46,204,113,0.45); }
+
+    /* FOOTER */
+    .site-footer { background: #0b0e14; border-top: 1px solid rgba(255,255,255,0.06); padding: 52px 24px 28px; }
+    .footer-inner { max-width: 1300px; margin: 0 auto; }
+    .footer-top { display: flex; gap: 48px; flex-wrap: wrap; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-brand { flex: 2; min-width: 220px; }
+    .footer-logo { font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .footer-brand p { font-size: 13px; color: var(--muted); line-height: 1.7; max-width: 280px; margin-bottom: 14px; }
+    .footer-brand a { font-size: 13px; color: var(--green); text-decoration: none; }
+    .footer-nav { flex: 1; min-width: 130px; }
+    .footer-nav h4 { font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: var(--green); font-weight: 700; margin-bottom: 14px; }
+    .footer-nav a { display: block; color: var(--muted); text-decoration: none; font-size: 13px; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-nav a:hover { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .footer-copy { font-size: 11.5px; color: #3d4155; line-height: 1.7; }
+
+    @media (max-width: 640px) {
+      .nav-logo { font-size: 13px; }
+      .page-hero { padding: 52px 16px 44px; }
+      .page-hero p { font-size: 16px; }
+      .widget-section { padding: 52px 16px 60px; }
+      .widget-card-header { padding: 22px 24px; }
+      .widget-card-body { padding: 24px; }
+      .trust-strip { padding: 0 16px 60px; }
+      .cta-section { padding: 60px 16px; }
+      .footer-top { gap: 24px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-accent">JSC</span> Property Investments</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="portfolio-performance.html">Results</a>
+        <a href="calculator.html" class="active">Calculator</a>
+        <a href="contact.html" class="nav-cta">Book a Discovery Call</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open');">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-tag">Free Tool</div>
+    <h1>What Can You <span class="grad">Actually Borrow?</span></h1>
+    <p>Get an instant estimate of your borrowing capacity — no broker appointment needed. Takes less than 2 minutes.</p>
+  </section>
+
+  <div class="widget-section">
+    <div class="widget-intro">
+      <div class="section-tag">Borrowing Capacity Calculator</div>
+      <h2>Know Your Numbers Before You Search</h2>
+      <p>Understanding your borrowing power is the first step to finding the right property. Use this tool to get a clear picture, then book a call with our team to build your strategy.</p>
+    </div>
+
+    <div class="widget-card">
+      <div class="widget-card-header">
+        <div class="icon">🏦</div>
+        <div>
+          <h3>Borrowing Capacity Calculator</h3>
+          <p>Powered by Quickli — trusted by mortgage professionals across Australia</p>
+        </div>
+      </div>
+      <div class="widget-card-body">
+        <!-- Quickli widget begin -->
+        <div class="quickli-form" data-url="https://omegacapital.quickli-forms.com.au/v2/embed/widgets/omegacapital/VU769lbNPoLg/" data-widget-name="borrowing-capacity"></div>
+        <script type="text/javascript" src="https://quickli-forms.com.au/v2/embed.js" async></script>
+        <!-- Quickli widget end -->
+
+        <div class="disclaimer">
+          <p><strong>Important:</strong> This calculator provides an estimate only and is not a credit assessment or formal loan approval. Results are indicative and based on the information you provide. Speak with a licensed mortgage broker or lender for advice specific to your situation. JSC Property Investments is a buyers agency and does not provide financial or lending advice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust-strip">
+    <div class="trust-card">
+      <div class="trust-icon">🔒</div>
+      <h4>Your Data Is Safe</h4>
+      <p>This tool is powered by Quickli. Your information is not stored or shared with JSC Property Investments.</p>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">⚡</div>
+      <h4>Instant Results</h4>
+      <p>Get a borrowing estimate in under 2 minutes — no waiting, no callbacks, no obligation.</p>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">🎯</div>
+      <h4>Next Step: Strategy</h4>
+      <p>Once you know your number, book a free discovery call and we'll map out exactly how to use it.</p>
+    </div>
+  </div>
+
+  <section class="cta-section">
+    <h2>Ready to Put That <span class="grad">Number to Work?</span></h2>
+    <p>Book a free discovery call and let's build a property strategy around your borrowing power.</p>
+    <a href="contact.html" class="btn-primary">Book Your Free Discovery Call</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="logo-accent">JSC</span> Property Investments</div>
+          <p>Australia's trusted buyers agency for investors and owner-occupiers. Specialists in QLD &amp; SA markets.</p>
+          <a href="mailto:info@jscpropertyinvestments.com.au">info@jscpropertyinvestments.com.au</a>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Us</a>
+          <a href="portfolio-performance.html">Portfolio Results</a>
+          <a href="calculator.html">Calculator</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-nav">
+          <h4>Our Markets</h4>
+          <a href="#">Moreton Bay, QLD</a>
+          <a href="#">Ipswich, QLD</a>
+          <a href="#">Logan, QLD</a>
+          <a href="#">Brisbane, QLD</a>
+          <a href="#">Adelaide, SA</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 JSC Property Investments. Licensed Buyers Agent. All rights reserved.</div>
+        <div class="footer-copy">Past performance is not indicative of future results. Not financial advice.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
