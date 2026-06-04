@@ -321,6 +321,21 @@ body {
     font-size: 13px;
   }
 }
+
+@media (max-width: 900px) {
+  .property-carousel {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .property-carousel {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+}
 </style>
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -378,7 +393,7 @@ body {
         </div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;">
+    <div class="property-carousel" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;">
       <div style="position:absolute;top:-20px;right:-20px;background:var(--green);color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:8px 14px;border-radius:100px;z-index:2;">✓ Real JSC Properties</div>
       <div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="/images/Jordan%20Z.jpg" alt="Investment property purchased by JSC buyers agent Brisbane Queensland" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="/images/Lydia%20L.jpg" alt="JSC Property Investments client property Brisbane QLD" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="/images/Travis%20A_2.jpg" alt="Investment property result secured by JSC buyers agency Queensland" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="/images/Flynn%20K.jpg" alt="Property secured below market value by JSC buyers agent" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="/images/Brock%20M.jpg" alt="JSC buyers agent property purchase Brisbane" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div><div style="overflow:hidden;border-radius:10px;aspect-ratio:4/3;"><img src="/images/Jack%20H.jpg" alt="Investment property sourced by JSC Property Investments Queensland" style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div>
     </div>
