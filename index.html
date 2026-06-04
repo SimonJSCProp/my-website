@@ -311,6 +311,16 @@ body {
   .awards-row > div { width: 100% !important; max-width: 300px; height: 110px !important; }
 }
 
+
+@media (max-width: 720px) {
+  .video-testimonial-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+  .video-testimonial-grid > div {
+    font-size: 13px;
+  }
+}
 </style>
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -497,7 +507,7 @@ body {
       <div style="position:absolute;bottom:16px;left:16px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">Due Diligence</div>
     </div>
     <div style="overflow:hidden;position:relative;">
-      <img src="/images/Award%20Winners.jpg" alt="Simon and Jacob at an awards night" style="width:100%;height:100%;object-fit:cover;object-position:30% 52%;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      <img src="/images/Award%20Winners.jpg" alt="Simon and Jacob at an awards night" style="width:100%;height:100%;object-fit:cover;object-position:30% 47%;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 60%);pointer-events:none;"></div>
       <div style="position:absolute;bottom:16px;left:16px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);">Award Winners</div>
     </div>
@@ -671,7 +681,7 @@ body {
       <h2>Real Clients. Real Results. On Camera.</h2>
       <p>No scripts, no actors. Just JSC clients talking about their experience.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;" class="video-testimonial-grid">
       <!-- Jack -->
       <div style="border-radius:14px;overflow:hidden;background:var(--dark3);border:1px solid var(--border);">
         <div style="position:relative;padding-top:177.7%;cursor:pointer;" onclick="(function(el){var ifr=document.createElement('iframe');ifr.src='https://drive.google.com/file/d/1hvCdCdHeVXma-h9xqSBWYq9G5mCzugsb/preview';ifr.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:none;';ifr.allow='autoplay';ifr.allowFullscreen=true;el.innerHTML='';el.appendChild(ifr);})(this)">
