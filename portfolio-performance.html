@@ -44,7 +44,6 @@
   --text: #e8eaf0; --muted: #7a8096; --logo-accent: #2ecc71;
 }
 body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; min-height: 100vh; }
-
 /* NAV */
 .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.96); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); padding: 0 24px; }
 .nav-inner { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
@@ -67,7 +66,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
   .nav-links a { padding: 14px 24px !important; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text) !important; display: block !important; }
   .nav-links a.nav-cta { margin: 8px 24px 0; text-align: center; border-bottom: none; border-radius: 8px; }
 }
-
 /* HERO */
 .hero { position: relative; background: linear-gradient(160deg, #0f1117 0%, #131d30 40%, #0f1e20 100%); padding: 90px 24px 70px; text-align: center; overflow: hidden; }
 .hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 800px; height: 600px; background: radial-gradient(ellipse, rgba(46,204,113,0.12) 0%, transparent 70%); pointer-events: none; }
@@ -76,7 +74,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .hero h1 { font-size: clamp(36px, 6vw, 68px); font-weight: 900; line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 20px; }
 .hero h1 .grad { background: linear-gradient(135deg, #2ecc71 0%, #27ae60 50%, #1a9650 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .hero-sub { font-size: 18px; color: var(--muted); max-width: 580px; margin: 0 auto 60px; line-height: 1.7; }
-
 /* STATS */
 .stats-grid { display: flex; justify-content: center; flex-wrap: wrap; max-width: 960px; margin: 0 auto; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; backdrop-filter: blur(10px); background: rgba(255,255,255,0.03); }
 .stat { flex: 1; min-width: 180px; padding: 28px 20px; border-right: 1px solid var(--border); text-align: center; }
@@ -84,31 +81,26 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .stat-num { display: block; font-size: 40px; font-weight: 900; line-height: 1; background: linear-gradient(135deg, #2ecc71, #27ae60); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -1px; }
 .stat-label { font-size: 12px; color: var(--text); margin-top: 8px; font-weight: 700; }
 .stat-sub { font-size: 10px; color: var(--muted); margin-top: 4px; letter-spacing: 0.3px; line-height: 1.4; }
-
 /* SECTION */
 .section { max-width: 1300px; margin: 0 auto; padding: 80px 24px; }
 .section-head { text-align: center; margin-bottom: 52px; }
 .section-head h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
 .section-head p { font-size: 17px; color: var(--muted); }
-
 /* FILTERS */
 .filters { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 52px; }
 .filter-btn { padding: 9px 22px; border-radius: 100px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
 .filter-btn:hover { border-color: rgba(46,204,113,0.4); color: var(--green); }
 .filter-btn.active { background: var(--green); border-color: var(--green); color: #fff; box-shadow: 0 0 20px rgba(46,204,113,0.3); }
-
 /* CARD GRID */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 22px; }
 .card { background: var(--dark2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; position: relative; }
 .card:hover { transform: translateY(-4px); border-color: rgba(46,204,113,0.25); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
 .card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--green); z-index: 2; }
 .card.oo::before { background: var(--gold); }
-
 /* PLACEHOLDER IMAGE */
 .card-img { width: 100%; height: 175px; background: linear-gradient(135deg, #111928 0%, #182038 50%, #111928 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .card-img svg { color: rgba(255,255,255,0.1); }
 .card-img-label { font-size: 9px; text-transform: uppercase; letter-spacing: 2.5px; color: rgba(255,255,255,0.12); font-weight: 700; }
-
 /* CARD TOP */
 .card-top { padding: 16px 20px 13px; background: linear-gradient(135deg, var(--dark3), var(--dark4)); border-bottom: 1px solid var(--border); }
 .card-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 9px; }
@@ -134,7 +126,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .result-bar.oo-bar .result-text strong { color: var(--gold); }
 .card.new-card .result-bar { background: rgba(99,130,255,0.06); border-color: rgba(99,130,255,0.15); }
 .card.new-card .result-text strong { color: #8b9dff; }
-
 /* CTA */
 .cta { background: linear-gradient(160deg, #131d30 0%, #0f1e20 100%); border-top: 1px solid var(--border); padding: 90px 24px; text-align: center; position: relative; overflow: hidden; }
 .cta::before { content: ''; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 500px; background: radial-gradient(ellipse, rgba(46,204,113,0.10) 0%, transparent 70%); pointer-events: none; }
@@ -143,7 +134,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .cta p { font-size: 17px; color: var(--muted); max-width: 480px; margin: 0 auto 40px; position: relative; }
 .cta-btn { display: inline-block; background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; font-size: 16px; font-weight: 800; padding: 17px 40px; border-radius: 10px; text-decoration: none; box-shadow: 0 8px 32px rgba(46,204,113,0.35); transition: transform 0.2s, box-shadow 0.2s; }
 .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(46,204,113,0.45); }
-
 /* FOOTER */
 .site-footer { background: #0b0e14; border-top: 1px solid rgba(255,255,255,0.06); padding: 52px 24px 28px; }
 .footer-inner { max-width: 1300px; margin: 0 auto; }
@@ -158,7 +148,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .footer-nav a:hover { color: #fff; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .footer-copy { font-size: 11.5px; color: #3d4155; line-height: 1.7; }
-
 @media (max-width: 640px) {
   .nav-logo { font-size: 13px; }
   /* Stats: 2×2 grid */
@@ -182,7 +171,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
   .footer-top { gap: 24px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
-
 /* ── BACKGROUND ENHANCEMENT ────────────────────────────────── */
 body {
   background-color: var(--dark);
@@ -192,7 +180,6 @@ body {
   background-size: 100% 100%, 32px 32px;
   background-attachment: fixed;
 }
-
 </style>
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -213,7 +200,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9P8DKMC"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><span class="logo-accent">JSC</span> Property Investments</a>
@@ -231,7 +217,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
   </div>
 </nav>
-
 <section class="hero">
   <div class="hero-tag">Verified Client Results</div>
   <h1>Real Deals.<br><span class="grad">Real Growth.</span></h1>
@@ -240,26 +225,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="stat">
       <span class="stat-num">19.1%</span>
       <div class="stat-label">Avg 12-Month Growth</div>
-      <div class="stat-sub">Verified results</div>
+      <div class="stat-sub">Verified across active portfolio</div>
     </div>
     <div class="stat">
       <span class="stat-num">32.2%</span>
-      <div class="stat-label">Avg Capital Growth</div>
-      <div class="stat-sub">Incl. recently settled, true figure is higher</div>
+      <div class="stat-label">Avg Total Growth Since Purchase</div>
+      <div class="stat-sub">Excl. recently settled — true figure is higher</div>
     </div>
     <div class="stat">
       <span class="stat-num">$200K+</span>
-      <div class="stat-label">Avg Dollar Gain</div>
-      <div class="stat-sub">Incl. recently settled, true figure is higher</div>
+      <div class="stat-label">Avg Equity Created Per Property</div>
+      <div class="stat-sub">Excl. recently settled — true figure is higher</div>
     </div>
     <div class="stat">
       <span class="stat-num">Zero</span>
-      <div class="stat-label">Client Losses</div>
-      <div class="stat-sub">No JSC client has ever lost money</div>
+      <div class="stat-label">Developer Kickbacks</div>
+      <div class="stat-sub">Not one dollar. Ever.</div>
     </div>
   </div>
 </section>
-
 <div class="section">
   <div class="section-head">
     <h2>Client Success Stories</h2>
@@ -268,9 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="contact.html" class="cta-btn">Book a Free Kick-off Call →</a>
     </div>
   </div>
-
   <div class="grid" id="grid">
-
     <div class="card" data-state="SA" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Brock%20M.jpg" alt="JSC buyers agent property purchase Brisbane" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -288,7 +270,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🏆</div><div class="result-text"><strong>$320K equity in 3.5 years</strong>Purchased $40K below market · Best long-term performer in portfolio</div></div>
       </div>
     </div>
-
     <div class="card oo" data-state="QLD" data-type="OO">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Jack%20H.jpg" alt="Investment property sourced by JSC Property Investments Queensland" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -306,7 +287,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar oo-bar"><div class="result-icon">🏡</div><div class="result-text"><strong>$430K equity in 18 months</strong>Secured $100K below market · Exceptional Moreton Bay growth</div></div>
       </div>
     </div>
-
     <div class="card" data-state="SA" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Stuart%20J_1.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -324,7 +304,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">📈</div><div class="result-text"><strong>$290K equity · repeat JSC client (3 properties)</strong>Purchased $20K below market · 27-month hold</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Joshua%20F_1.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -342,7 +321,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🚀</div><div class="result-text"><strong>$275K equity in 26 months</strong>Ipswich growth corridor · secured $5K below market</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Charlotte%20M.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -360,7 +338,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">💎</div><div class="result-text"><strong>$250K equity · townhouse entry-level price</strong>$20K below market · 28-month hold</div></div>
       </div>
     </div>
-
     <div class="card" data-state="SA" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Lachlan%20T.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -378,7 +355,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">📊</div><div class="result-text"><strong>$255K equity in 45 months</strong>Coastal SA · strong long-term growth story</div></div>
       </div>
     </div>
-
     <div class="card" data-state="SA" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Sam%20T.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -396,7 +372,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🎯</div><div class="result-text"><strong>$237K equity in 34 months</strong>Purchased $25K below market value</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Elmer%20C_1.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -414,7 +389,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🌟</div><div class="result-text"><strong>$235K equity in 30 months</strong>Moreton Bay growth corridor · $10K below market</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Georgina%20H.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -432,7 +406,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">⚡</div><div class="result-text"><strong>$250K equity in just 8 months</strong>Fastest growth result in current portfolio</div></div>
       </div>
     </div>
-
     <div class="card" data-state="SA" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Hunter%20B-S_1.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -450,7 +423,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🔁</div><div class="result-text"><strong>$200K equity · used to fund 2nd property</strong>Repeat JSC client · portfolio building strategy</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Cory%20L.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -468,7 +440,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🔥</div><div class="result-text"><strong>$270K equity in only 7 months</strong>Logan growth corridor · $20K below market</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Stuart%20J_2%281%29.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -486,7 +457,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">📈</div><div class="result-text"><strong>$213K equity in 27 months</strong>2nd of 3 properties built with JSC</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Travis%20A_1.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -504,7 +474,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🔁</div><div class="result-text"><strong>$180K equity · then secured a 2nd property</strong>$20K below market · Ipswich investor corridor</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Hunter%20B-S_2.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -522,7 +491,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">💪</div><div class="result-text"><strong>$180K equity in 9 months</strong>Funded from QLD property equity · QLD expansion</div></div>
       </div>
     </div>
-
     <div class="card oo" data-state="QLD" data-type="OO">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Lydia%20L.jpg" alt="JSC Property Investments client property Brisbane QLD" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -540,7 +508,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar oo-bar"><div class="result-icon">🏡</div><div class="result-text"><strong>$228K equity in 10 months</strong>$20K below market · Moreton Bay lifestyle suburb</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Simone%20L.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -558,7 +525,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">✨</div><div class="result-text"><strong>$200K equity in 12 months</strong>$20K below market · Griffin growth corridor</div></div>
       </div>
     </div>
-
     <div class="card oo" data-state="QLD" data-type="OO">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Travis%20A_2.jpg" alt="Investment property result secured by JSC buyers agency Queensland" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -576,7 +542,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar oo-bar"><div class="result-icon">🏡</div><div class="result-text"><strong>$210K equity in 20 months</strong>$20K below market · JSC 2-property build</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Joshua%20L_1.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -594,7 +559,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🏘️</div><div class="result-text"><strong>$220K equity in 9 months · dual income</strong>Duplex strategy · $20K below market value</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Jordan%20Z.jpg" alt="Investment property purchased by JSC buyers agent Brisbane Queensland" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -612,8 +576,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🎯</div><div class="result-text"><strong>$158K equity in 17 months</strong>Secured $28K below market value</div></div>
       </div>
     </div>
-
-
     <div class="card oo" data-state="QLD" data-type="OO">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Alex%20S.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -631,7 +593,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar oo-bar"><div class="result-icon">🏡</div><div class="result-text"><strong>$100K equity in 18 months</strong>Premium Brisbane suburb · long-term hold strategy</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Desmond%20SB.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -649,7 +610,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">💰</div><div class="result-text"><strong>$88K equity · secured well below market</strong>Strong negotiation result · Ipswich entry-level</div></div>
       </div>
     </div>
-
     <div class="card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Stuart%20J_2.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -667,8 +627,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🏗️</div><div class="result-text"><strong>$150K equity · 3rd property with JSC in 23 months</strong>Portfolio compounding strategy in action</div></div>
       </div>
     </div>
-
-
     <!-- RECENTLY SETTLED, no confirmed growth yet, showing projected -->
     <div class="card new-card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Flynn%20K.jpg" alt="Property secured below market value by JSC buyers agent" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
@@ -687,7 +645,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🌱</div><div class="result-text"><strong>Recently settled · tracking ahead of projections</strong>Purchased $20K below market · Moreton Bay corridor</div></div>
       </div>
     </div>
-
     <div class="card new-card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Michael%20J%20T.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -705,7 +662,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🌱</div><div class="result-text"><strong>Recently settled · strong early indicators</strong>Purchased $20K below market · Goodna growth area</div></div>
       </div>
     </div>
-
     <div class="card new-card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Joshua%20L_2.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -723,7 +679,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🏘️</div><div class="result-text"><strong>Duplex, dual rental income from day one</strong>2nd property with JSC · Ipswich growth corridor</div></div>
       </div>
     </div>
-
     <div class="card new-card oo" data-state="QLD" data-type="OO">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Avon%20C.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -741,7 +696,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar oo-bar"><div class="result-icon">🏡</div><div class="result-text"><strong>Premium Brisbane home · recently settled</strong>Inner-west Brisbane · strong long-term hold</div></div>
       </div>
     </div>
-
     <div class="card new-card" data-state="QLD" data-type="INV">
       <div class="card-img" style="padding:0;overflow:hidden;"><img src="/images/Andreas%20S.jpg" alt="Property" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" onerror="this.parentElement.innerHTML='<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;38&quot; height=&quot;38&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.1)&quot; stroke-width=&quot;1.2&quot;><path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/></svg>'"></div>
       <div class="card-top">
@@ -759,18 +713,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="result-bar"><div class="result-icon">🌱</div><div class="result-text"><strong>Recently settled · $20K below market value</strong>Bellbird Park · strong Ipswich corridor fundamentals</div></div>
       </div>
     </div>
-
-
   </div>
 </div>
-
 <section class="cta">
   <div style="text-align:center;padding:32px 24px 0;font-size:15px;font-weight:700;color:var(--muted);letter-spacing:1px;">+ many more client results not shown</div>
   <h2>Ready to Write Your<br><span class="grad">Success Story?</span></h2>
   <p>Every result on this page is real, verified, and belongs to a real JSC client. Your next chapter starts with a conversation.</p>
   <a href="contact.html" class="cta-btn">Book a Kick-off Call →</a>
 </section>
-
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-top">
@@ -806,7 +756,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </footer>
-
 <script>
 function filter(val, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
