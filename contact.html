@@ -153,8 +153,8 @@ textarea { resize: vertical; min-height: 110px; }
 .calendly-card { border-radius: 14px; background: linear-gradient(135deg, var(--dark3), var(--dark4)); border: 1px solid var(--border); padding: 20px; text-align: center; }
 .calendly-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
 .calendly-card > p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.65; }
-.calendly-inline-wrap { border-radius: 10px; overflow: hidden; background: #fff; min-height: 700px; }
-.calendly-inline-widget { min-width: 100%; height: 700px; }
+.calendly-inline-wrap { border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.25); }
+.calendly-inline-widget { width: 100%; height: 920px; }
 .calendly-fallback { display: block; background: var(--green); color: #fff; font-size: 14px; font-weight: 700; padding: 12px 28px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
 .calendly-fallback:hover { opacity: 0.88; }
 /* RESPONSE TIME */
@@ -208,7 +208,7 @@ textarea { resize: vertical; min-height: 110px; }
   /* Contact section: reduce inner padding */
   .contact-section { padding: 52px 16px; }
   /* Calendly: shorter on mobile */
-  .calendly-inline-wrap, .calendly-inline-widget { min-height: 580px; height: 580px; }
+  .calendly-inline-widget { height: 780px; }
 }
 /* ── BACKGROUND ENHANCEMENT ────────────────────────────────── */
 body {
@@ -415,8 +415,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Pick a time that suits you below — no phone tag required.</p>
       <div class="calendly-inline-wrap">
         <div class="calendly-inline-widget"
-             data-url="https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?hide_event_type_details=1&hide_gdpr_banner=1&background_color=161c28&text_color=e8eaf0&primary_color=2ecc71"
-             style="min-width:100%;height:100%;">
+             data-url="https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=2ecc71">
         </div>
       </div>
       <noscript>
