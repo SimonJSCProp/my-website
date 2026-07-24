@@ -18,7 +18,6 @@
   --text: #e8eaf0; --muted: #7a8096;
 }
 body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; }
-
 /* NAV */
 .nav { position: sticky; top: 0; z-index: 100; background: rgba(15,17,23,0.96); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); padding: 0 24px; }
 .nav-inner { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
@@ -41,7 +40,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
   .nav-links a { padding: 14px 24px !important; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); color: var(--text) !important; display: block !important; }
   .nav-links a.nav-cta { margin: 8px 24px 0; text-align: center; border-bottom: none; border-radius: 8px; }
 }
-
 /* PAGE HEADER */
 .page-header {
   background: linear-gradient(160deg, #0c0f1c 0%, #0f1c35 60%, #091a14 100%);
@@ -68,13 +66,10 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 }
 .page-header h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 900; letter-spacing: -1px; margin-bottom: 14px; }
 .page-header p { font-size: 15px; color: var(--muted); line-height: 1.7; }
-
 /* CONTENT */
 .policy-wrap { max-width: 800px; margin: 0 auto; padding: 64px 24px 80px; }
-
 .policy-section { margin-bottom: 52px; }
 .policy-section:last-child { margin-bottom: 0; }
-
 .policy-section h2 {
   font-size: 20px; font-weight: 800; color: #fff;
   margin-bottom: 16px; padding-bottom: 12px;
@@ -103,7 +98,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
   position: absolute; left: 0;
   color: var(--green); font-size: 13px;
 }
-
 .policy-highlight {
   background: var(--dark2);
   border: 1px solid var(--border);
@@ -114,7 +108,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 }
 .policy-highlight p { margin-bottom: 0; font-size: 14px; color: var(--muted); }
 .policy-highlight strong { color: var(--text); }
-
 .policy-contact-card {
   background: var(--dark2);
   border: 1px solid var(--border);
@@ -126,7 +119,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .policy-contact-card p { font-size: 14px; color: var(--muted); margin-bottom: 6px; }
 .policy-contact-card a { color: var(--green); text-decoration: none; }
 .policy-contact-card a:hover { text-decoration: underline; }
-
 .toc {
   background: var(--dark2);
   border: 1px solid var(--border);
@@ -138,7 +130,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .toc a { display: block; color: var(--muted); text-decoration: none; font-size: 14px; padding: 4px 0; transition: color 0.2s; }
 .toc a:hover { color: #fff; }
 .toc a::before { content: '↓ '; color: var(--green); font-size: 12px; }
-
 /* FOOTER */
 .site-footer { background: #0b0e14; border-top: 1px solid rgba(255,255,255,0.06); padding: 52px 24px 28px; }
 .footer-inner { max-width: 1300px; margin: 0 auto; }
@@ -153,7 +144,6 @@ body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background
 .footer-nav a:hover { color: #fff; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
 .footer-copy { font-size: 11.5px; color: #3d4155; line-height: 1.7; }
-
 @media (max-width: 720px) {
   .footer-top { gap: 24px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
@@ -172,7 +162,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9P8DKMC"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
@@ -191,7 +180,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </nav>
-
 <!-- PAGE HEADER -->
 <div class="page-header">
   <div class="page-header-inner">
@@ -200,10 +188,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Last updated: 27 May 2026. JSC Property Investments is committed to protecting your personal information in accordance with the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles (APPs).</p>
   </div>
 </div>
-
 <!-- CONTENT -->
 <div class="policy-wrap">
-
   <!-- TABLE OF CONTENTS -->
   <div class="toc">
     <div class="toc-title">Contents</div>
@@ -212,14 +198,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#how-collected">3. How We Collect It</a>
     <a href="#use">4. How We Use Your Information</a>
     <a href="#disclosure">5. Disclosure to Third Parties</a>
-    <a href="#storage">6. Storage & Security</a>
-    <a href="#access">7. Access & Correction</a>
-    <a href="#cookies">8. Cookies & Website Analytics</a>
-    <a href="#complaints">9. Complaints</a>
-    <a href="#changes">10. Changes to This Policy</a>
-    <a href="#contact">11. Contact Us</a>
+    <a href="#amlctf">6. Anti-Money Laundering and Counter-Terrorism Financing</a>
+    <a href="#storage">7. Storage & Security</a>
+    <a href="#access">8. Access & Correction</a>
+    <a href="#cookies">9. Cookies & Website Analytics</a>
+    <a href="#complaints">10. Complaints</a>
+    <a href="#changes">11. Changes to This Policy</a>
+    <a href="#contact">12. Contact Us</a>
   </div>
-
   <!-- 1. ABOUT -->
   <div class="policy-section" id="about">
     <h2>1. About This Policy</h2>
@@ -227,12 +213,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>This Policy applies to all personal information we collect through our website (<a href="https://jscpropertyinvestments.com.au" style="color:var(--green)">jscpropertyinvestments.com.au</a>), our services, and any communications you have with us.</p>
     <p>By using our website or engaging our services, you consent to the collection, use, and disclosure of your personal information as described in this Policy.</p>
   </div>
-
   <!-- 2. WHAT WE COLLECT -->
   <div class="policy-section" id="collection">
     <h2>2. What Information We Collect</h2>
     <p>We collect personal information that is necessary for us to provide our buyers agency services. This may include:</p>
-
     <h3>Identity & Contact Information</h3>
     <ul>
       <li>Full name</li>
@@ -240,7 +224,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Phone number</li>
       <li>Residential or postal address</li>
     </ul>
-
     <h3>Financial & Property Information</h3>
     <ul>
       <li>Budget and borrowing capacity (as disclosed by you)</li>
@@ -248,25 +231,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Information about existing property holdings (as disclosed by you)</li>
       <li>Details about your mortgage broker or financial adviser (if you choose to provide them)</li>
     </ul>
-
     <h3>Communications</h3>
     <ul>
       <li>Records of enquiries and correspondence with us via email, phone, or our website contact form</li>
       <li>Notes from Kick Off Calls and consultation sessions</li>
     </ul>
-
     <h3>Website Usage Information</h3>
     <ul>
       <li>IP address and browser type</li>
       <li>Pages visited and time spent on our website</li>
       <li>Referral source (how you found our website)</li>
     </ul>
-
     <div class="policy-highlight">
       <p><strong>Sensitive information:</strong> We do not intentionally collect sensitive information (such as health, financial account numbers, or government identifiers) unless you voluntarily provide it and it is necessary for delivering our services.</p>
     </div>
   </div>
-
   <!-- 3. HOW COLLECTED -->
   <div class="policy-section" id="how-collected">
     <h2>3. How We Collect It</h2>
@@ -280,7 +259,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <p>Where it is reasonable and practicable to do so, we collect personal information directly from you rather than from third parties.</p>
   </div>
-
   <!-- 4. HOW WE USE IT -->
   <div class="policy-section" id="use">
     <h2>4. How We Use Your Information</h2>
@@ -296,12 +274,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>We will only use your personal information for the primary purpose for which it was collected, or for a directly related secondary purpose that you would reasonably expect.</p>
     <p>We will not sell, rent, or trade your personal information to any third party for marketing purposes.</p>
   </div>
-
   <!-- 5. DISCLOSURE -->
   <div class="policy-section" id="disclosure">
     <h2>5. Disclosure to Third Parties</h2>
     <p>We may disclose your personal information to third parties in the following limited circumstances:</p>
-
     <h3>Service Providers</h3>
     <p>We work with trusted third-party service providers who assist us in operating our business, including:</p>
     <ul>
@@ -310,38 +286,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Website hosting and analytics providers</li>
     </ul>
     <p>These providers are required to handle your information confidentially and only for the purposes for which we disclose it.</p>
-
     <h3>Professional Referrals</h3>
     <p>With your consent, we may share relevant information with mortgage brokers, solicitors, conveyancers, building inspectors, or other property professionals involved in your transaction.</p>
-
     <h3>Legal Requirements</h3>
     <p>We may disclose your personal information if required by law, a court order, or a regulatory authority, or where disclosure is necessary to protect the rights, property, or safety of JSC, our clients, or others.</p>
-
     <div class="policy-highlight">
       <p><strong>We do not disclose your personal information to overseas recipients</strong> except where your use of third-party platforms (e.g. Google services) may involve overseas data processing. Where this occurs, we take reasonable steps to ensure those parties handle your information in accordance with the APPs.</p>
     </div>
   </div>
-
-  <!-- 6. STORAGE & SECURITY -->
+  <!-- 6. AML/CTF -->
+  <div class="policy-section" id="amlctf">
+    <h2>6. Anti-Money Laundering and Counter-Terrorism Financing</h2>
+    <p>JSC Property Investments is a reporting entity under the <em>Anti-Money Laundering and Counter-Terrorism Financing Act 2006</em> (Cth) (AML/CTF Act). As part of our obligations under this Act, we are required to collect and verify certain personal information about our clients, including identification documents, the source of funds, and beneficial ownership details where relevant.</p>
+    <p>This information is used to conduct customer due diligence and ongoing monitoring as required by law. We may be required to disclose this information to AUSTRAC and other government authorities, and to report suspicious matters without prior notice to you.</p>
+    <p>Records collected for AML/CTF purposes are retained for a minimum of seven years, in accordance with our legal obligations, and are handled subject to the same security standards described elsewhere in this Policy.</p>
+  </div>
+  <!-- 7. STORAGE & SECURITY -->
   <div class="policy-section" id="storage">
-    <h2>6. Storage & Security</h2>
+    <h2>7. Storage & Security</h2>
     <p>We take reasonable steps to protect the personal information we hold from misuse, interference, loss, and from unauthorised access, modification, or disclosure.</p>
     <p>Personal information is stored in secure cloud-based platforms with access controls. We regularly review our information security practices and update them as appropriate.</p>
     <p>We retain personal information for as long as it is needed to provide our services or comply with legal obligations. When personal information is no longer required, we take reasonable steps to destroy or de-identify it.</p>
     <p>While we take these precautions, no transmission of data over the internet is completely secure. We cannot guarantee the security of information you send to us electronically.</p>
   </div>
-
-  <!-- 7. ACCESS & CORRECTION -->
+  <!-- 8. ACCESS & CORRECTION -->
   <div class="policy-section" id="access">
-    <h2>7. Access & Correction</h2>
+    <h2>8. Access & Correction</h2>
     <p>You have the right to request access to the personal information we hold about you, and to request that we correct any inaccurate, incomplete, or out-of-date information.</p>
-    <p>To make an access or correction request, please contact us using the details in Section 11 below. We will respond to your request within 30 days. In some circumstances, we may be unable to provide access — if so, we will explain why in writing.</p>
+    <p>To make an access or correction request, please contact us using the details in Section 12 below. We will respond to your request within 30 days. In some circumstances, we may be unable to provide access — if so, we will explain why in writing.</p>
     <p>We do not charge a fee for making an access request, but we may charge a reasonable fee to cover the cost of providing access if the request is complex or time-consuming.</p>
   </div>
-
-  <!-- 8. COOKIES -->
+  <!-- 9. COOKIES -->
   <div class="policy-section" id="cookies">
-    <h2>8. Cookies & Website Analytics</h2>
+    <h2>9. Cookies & Website Analytics</h2>
     <p>Our website uses cookies and similar tracking technologies to improve your experience and help us understand how visitors use the site. Cookies are small text files stored on your device by your browser.</p>
     <p>We use cookies to:</p>
     <ul>
@@ -352,30 +329,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>You can disable cookies through your browser settings at any time. Note that disabling cookies may affect the functionality of some parts of our website.</p>
     <p>We do not use cookies to collect sensitive personal information or financial data.</p>
   </div>
-
-  <!-- 9. COMPLAINTS -->
+  <!-- 10. COMPLAINTS -->
   <div class="policy-section" id="complaints">
-    <h2>9. Complaints</h2>
-    <p>If you believe we have breached your privacy or handled your personal information in a way that is inconsistent with the APPs, you can make a complaint by contacting us using the details in Section 11 below.</p>
+    <h2>10. Complaints</h2>
+    <p>If you believe we have breached your privacy or handled your personal information in a way that is inconsistent with the APPs, you can make a complaint by contacting us using the details in Section 12 below.</p>
     <p>We will acknowledge your complaint promptly and aim to resolve it within 30 days. If you are not satisfied with our response, you may escalate your complaint to the Office of the Australian Information Commissioner (OAIC):</p>
     <ul>
       <li>Website: <a href="https://www.oaic.gov.au" target="_blank" rel="noopener" style="color:var(--green)">www.oaic.gov.au</a></li>
       <li>Phone: 1300 363 992</li>
     </ul>
   </div>
-
-  <!-- 10. CHANGES -->
+  <!-- 11. CHANGES -->
   <div class="policy-section" id="changes">
-    <h2>10. Changes to This Policy</h2>
+    <h2>11. Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal obligations. The current version will always be available on our website, with the "last updated" date shown at the top of this page.</p>
     <p>We encourage you to review this Policy periodically. Continued use of our website or services after any changes constitutes your acceptance of the updated Policy.</p>
   </div>
-
-  <!-- 11. CONTACT -->
+  <!-- 12. CONTACT -->
   <div class="policy-section" id="contact">
-    <h2>11. Contact Us</h2>
+    <h2>12. Contact Us</h2>
     <p>If you have any questions about this Privacy Policy, wish to access or correct your personal information, or would like to make a complaint, please contact us:</p>
-
     <div class="policy-contact-card">
       <div class="label">JSC Property Investments — Privacy Contact</div>
       <p><strong style="color:var(--text)">Email:</strong> <a href="mailto:info@jscpropertyinvestments.com.au">info@jscpropertyinvestments.com.au</a></p>
@@ -384,9 +357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p style="margin-top:14px;font-size:13px;">We aim to respond to all privacy enquiries within 5 business days.</p>
     </div>
   </div>
-
 </div>
-
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
@@ -424,6 +395,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </footer>
-
 </body>
 </html>
