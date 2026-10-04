@@ -258,14 +258,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Fill this in and pick a time that suits you on the next screen.</p>
     <form id="webform84429000007133064" action="https://crm.zoho.com.au/crm/WebToLeadForm" name="WebToLeads84429000007133064" method="POST" onsubmit="return submitJSC(this)" accept-charset="UTF-8">
       <!-- Zoho CRM auth tokens — do not remove -->
-      <input type="text" style="display:none;" name="xnQsjsdp" value="e8b880bc9452c27d23e3b995644d700beddb646670a7b97dd16249e5a468b4d0">
+      <input type="text" style="display:none;" name="xnQsjsdp" value="48b6ce07f6c89f44242799d7b4cf50b8e925103aa7803622c480e4f4a2dfbf46">
       <input type="hidden" name="zc_gad" id="zc_gad" value="">
-      <input type="text" style="display:none;" name="xmIwtLD" value="4b8eb4eafc5148412964f49ac548b5b767b3339d953c80c47bc22eff3798635fc923c5ba27450b53c97df258e2e462d7">
+      <input type="text" style="display:none;" name="xmIwtLD" value="bebc4295dd1b522e465c47daa73f2077e2d45d10c1ebc741353040d5f35302777ec44e72a43b8f60b24b52c3a7387929">
       <input type="text" style="display:none;" name="actionType" value="TGVhZHM=">
       <input type="text" style="display:none;" name="returnURL" value="https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?utm_source=website&utm_medium=contact_form">
       <input type="text" style="display:none;" name="LEADCF177" value="Website">
       <input type="text" style="display:none;" name="aG9uZXlwb3Q" value="">
-      <input type="hidden" id="zohoDescript" name="Description" value="">
       <!-- End Zoho tokens -->
       <div class="form-row">
         <div class="form-group">
@@ -289,44 +288,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="form-group">
         <label for="goal">What Are You Looking to Achieve?</label>
-        <select id="goal" required>
+        <select id="goal" name="LEADCF307" required>
           <option value="" disabled selected>Select your goal</option>
-          <option>Buy my first investment property</option>
-          <option>Add to my existing portfolio</option>
-          <option>Buy my first home</option>
-          <option>Upgrade / downgrade my home</option>
-          <option>SMSF property investment</option>
-          <option>Not sure — I need guidance</option>
+          <option value="Buy my first investment property">Buy my first investment property</option>
+          <option value="Add to my existing portfolio">Add to my existing portfolio</option>
+          <option value="Buy my first home">Buy my first home</option>
+          <option value="Upgrade / downgrade my home">Upgrade / downgrade my home</option>
+          <option value="SMSF property investment">SMSF property investment</option>
+          <option value="Not sure — I need guidance">Not sure — I need guidance</option>
         </select>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label for="budget">Approximate Budget</label>
-          <select id="budget">
-            <option value="" disabled selected>Select range</option>
-            <option>Under $400,000</option>
-            <option>$400,000 – $600,000</option>
-            <option>$600,000 – $800,000</option>
-            <option>$800,000 – $1,000,000</option>
-            <option>$1,000,000+</option>
-            <option>Not sure yet</option>
-          </select>
+          <select id="budget" name="LEADCF309">
+          <option value="" disabled selected>Select range</option>
+          <option value="Under $400,000">Under $400,000</option>
+          <option value="$400,000 – $600,000">$400,000 – $600,000</option>
+          <option value="$600,000 – $800,000">$600,000 – $800,000</option>
+          <option value="$800,000 – $1,000,000">$800,000 – $1,000,000</option>
+          <option value="$1,000,000+">$1,000,000+</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
         </div>
         <div class="form-group">
           <label for="timeline">Your Timeline</label>
-          <select id="timeline">
-            <option value="" disabled selected>When are you looking?</option>
-            <option>ASAP — I'm ready now</option>
-            <option>Within 3 months</option>
-            <option>3–6 months</option>
-            <option>6–12 months</option>
-            <option>Just researching for now</option>
-          </select>
+          <select id="timeline" name="LEADCF308">
+          <option value="" disabled selected>When are you looking?</option>
+          <option value="ASAP — I'm ready now">ASAP — I'm ready now</option>
+          <option value="Within 3 months">Within 3 months</option>
+          <option value="3–6 months">3–6 months</option>
+          <option value="6–12 months">6–12 months</option>
+          <option value="Just researching for now">Just researching for now</option>
+        </select>
         </div>
       </div>
       <div class="form-group">
         <label for="message">Anything else we should know? (Optional)</label>
-        <textarea id="message" placeholder="Tell us about your situation, any specific suburbs you're interested in, or questions you have..."></textarea>
+        <textarea id="message" name="Description" placeholder="Tell us about your situation, any specific suburbs you're interested in, or questions you have..."></textarea>
       </div>
       <button type="submit" class="form-submit" id="jscSubmitBtn">Book My Free Kick-off Call →</button>
       <p class="form-note">By submitting this form you agree to be contacted by JSC Property Investments. We respect your privacy and will never share your details.</p>
@@ -345,16 +344,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           alert('Please enter a valid email address.'); emailEl.focus(); return false;
         }
       }
-      var goal = document.getElementById('goal');
-      var budget = document.getElementById('budget');
-      var timeline = document.getElementById('timeline');
-      var msg = document.getElementById('message');
-      var parts = [];
-      if (goal && goal.selectedIndex > 0) parts.push('Goal: ' + goal.options[goal.selectedIndex].text);
-      if (budget && budget.selectedIndex > 0) parts.push('Budget: ' + budget.options[budget.selectedIndex].text);
-      if (timeline && timeline.selectedIndex > 0) parts.push('Timeline: ' + timeline.options[timeline.selectedIndex].text);
-      if (msg && msg.value.trim()) parts.push('Message: ' + msg.value.trim());
-      document.getElementById('zohoDescript').value = parts.join('\n');
       return true;
     }
 
@@ -400,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return false;
     }
     </script>
-    <script id="wf_anal" src="https://crm.zohopublic.com.au/crm/WebFormAnalyticsServeServlet?rid=96cb934c1547987555da0b2060e78c3b06fd6799c0cddbcdd9c7264a9dc6b8a2f3af79547ddb2c5fcaac4e63788ed0ecgid116d72387f72d506ed748635745ffaadef9bcb399e94b12e4aebbcb883aacc2egid29410f70a11aa2ac8e7f8c5e9c260d321cadc31542a5e68f61f50cc4111f8184gidd53fc8f0a839e4fd008403522a0ee4f259840de97991e66264a3e83d4278dcef&tw=26e00e778e2199ce88e6716fd9f9e6ad4f03799df87112f40f07eb1346b24128&version=v2"></script>
+    <script id="wf_anal" src="https://crm.zohopublic.com.au/crm/WebFormAnalyticsServeServlet?rid=2cd4f567620d89f40df5f69e8ef15df8ae58777b4dbf93b9d37a0eeb7af96db35e89b6ed645088694011395a4f19078bgid2d000fd28df941635872fe72f41958e43d39c37ee9f5486b862d0db317a0ae0bgid3ef98a1e685ce2000aea0f4d9b53f839b0ed9ca6a3a8936f17e150413c03534dgidb24026970a7d37f819ae036bb3f94f001698d5601220c84d43aca03781e423f8&tw=6a4f0a0b83ed376754a17c7ee9d592f4abf91c15faf92b31604ba41a19b41778&version=v2"></script>
   </div>
   <!-- SIDEBAR -->
   <div class="contact-sidebar">
