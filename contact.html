@@ -331,6 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button type="submit" class="form-submit" id="jscSubmitBtn">Book My Free Kick-off Call →</button>
       <p class="form-note">By submitting this form you agree to be contacted by JSC Property Investments. We respect your privacy and will never share your details.</p>
     </form>
+    <iframe name="jscFrame" id="jscFrame" title="form submission" tabindex="-1" aria-hidden="true" style="display:none;width:0;height:0;border:0;" onload="window.jscFrameLoaded && jscFrameLoaded()"></iframe>
     <script>
     function checkMandatoryJSC() {
       var lname = document.forms['WebToLeads84429000007133064']['Last Name'];
@@ -357,18 +358,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return true;
     }
 
-    // Validates, fires form_submission for GTM, posts the lead to Zoho in the
-    // background, then sends the visitor to Calendly. Does not rely on Zoho's redirect.
-    // If the fallback native post was used, Zoho returns here with ?submitted=1: continue to Calendly
-    if (window.location.search.indexOf('submitted=1') > -1) {
-      window.addEventListener('load', function () {
-        setTimeout(function () {
-          window.location.replace('https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?utm_source=website&utm_medium=contact_form');
-        }, 50);
-      });
-    }
-    var jscSubmitting = false;
+    // Validates, fires form_submission for GTM, posts the lead to Zoho inside a hidden
+    // frame (the visitor never leaves the page), then sends the visitor to Calendly.
     var JSC_CALENDLY = 'https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?utm_source=website&utm_medium=contact_form';
+    var jscSubmitting = false, jscTracked = false, jscPosted = false, jscDone = false, jscArmed = false;
+    function jscFinish() {
+      if (jscDone || !jscTracked || !jscPosted) return;
+      jscDone = true;
+      window.location.href = JSC_CALENDLY;
+    }
+    function jscFrameLoaded() {
+      if (!jscArmed) return;
+      jscPosted = true;
+      jscFinish();
+    }
     function submitJSC(form) {
       if (jscSubmitting) return false;
       if (!checkMandatoryJSC()) return false;
@@ -376,16 +379,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var btn = document.getElementById('jscSubmitBtn');
       if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
 
-      var tracked = false, posted = false, done = false;
-      function finish() {
-        if (done || !tracked || !posted) return;
-        done = true;
-        window.location.href = JSC_CALENDLY;
-      }
-      function trackedDone() { tracked = true; finish(); }
-      function postedDone() { posted = true; finish(); }
-
-      // 1. Tracking event (GTM callback, with a fallback if GTM is blocked)
+      // Tracking event (GTM callback, with a fallback if GTM is blocked)
+      function trackedDone() { jscTracked = true; jscFinish(); }
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: 'form_submission',
@@ -395,22 +390,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
       setTimeout(trackedDone, 1200);
 
-      // 2. Lead to Zoho in the background
-      try {
-        fetch(form.action, {
-          method: 'POST',
-          mode: 'no-cors',
-          keepalive: true,
-          body: new URLSearchParams(new FormData(form))
-        }).then(postedDone).catch(function () {
-          // Fallback: normal form post (Zoho then redirects to returnURL)
-          form.submit();
-        });
-      } catch (e) {
-        form.submit();
-      }
-      // Never leave the visitor stuck
-      setTimeout(postedDone, 4000);
+      // Post the lead to Zoho into the hidden frame
+      form.target = 'jscFrame';
+      jscArmed = true;
+      form.submit();
+
+      // Never leave the visitor stuck: go to Calendly after 4 seconds regardless
+      setTimeout(function () { jscPosted = true; jscFinish(); }, 4000);
       return false;
     }
     </script>
