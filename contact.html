@@ -357,29 +357,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return true;
     }
 
-    // Validates, fires the form_submission event for GTM (Meta Lead, GA4),
-    // then submits to Zoho once GTM has finished (or after a short fallback).
+    // Validates, fires form_submission for GTM, posts the lead to Zoho in the
+    // background, then sends the visitor to Calendly. Does not rely on Zoho's redirect.
     var jscSubmitting = false;
+    var JSC_CALENDLY = 'https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?utm_source=website&utm_medium=contact_form';
     function submitJSC(form) {
       if (jscSubmitting) return false;
       if (!checkMandatoryJSC()) return false;
       jscSubmitting = true;
       var btn = document.getElementById('jscSubmitBtn');
-      if (btn) btn.disabled = true;
-      var sent = false;
-      function go() {
-        if (sent) return;
-        sent = true;
-        form.submit();
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+
+      var tracked = false, posted = false, done = false;
+      function finish() {
+        if (done || !tracked || !posted) return;
+        done = true;
+        window.location.href = JSC_CALENDLY;
       }
+      function trackedDone() { tracked = true; finish(); }
+      function postedDone() { posted = true; finish(); }
+
+      // 1. Tracking event (GTM callback, with a fallback if GTM is blocked)
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: 'form_submission',
         form_name: 'contact_page',
-        eventCallback: go,
+        eventCallback: trackedDone,
         eventTimeout: 1000
       });
-      setTimeout(go, 1200);
+      setTimeout(trackedDone, 1200);
+
+      // 2. Lead to Zoho in the background
+      try {
+        fetch(form.action, {
+          method: 'POST',
+          mode: 'no-cors',
+          redirect: 'manual',
+          keepalive: true,
+          body: new URLSearchParams(new FormData(form))
+        }).then(postedDone).catch(function () {
+          // Fallback: normal form post (Zoho then redirects to returnURL)
+          form.submit();
+        });
+      } catch (e) {
+        form.submit();
+      }
+      // Never leave the visitor stuck
+      setTimeout(postedDone, 4000);
       return false;
     }
     </script>
