@@ -262,7 +262,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="hidden" name="zc_gad" id="zc_gad" value="">
       <input type="text" style="display:none;" name="xmIwtLD" value="c9195c18f3ad2ca9bf7f98da9626f39f7a26de9a715dbdfe718f5378e76578a9557c469c23196aa13625c59e3e9abfa3">
       <input type="text" style="display:none;" name="actionType" value="TGVhZHM=">
-      <input type="text" style="display:none;" name="returnURL" value="https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?utm_source=website&utm_medium=contact_form">
+      <input type="text" style="display:none;" name="returnURL" value="https://jscpropertyinvestments.com.au/contact?submitted=1">
       <input type="text" style="display:none;" name="LEADCF177" value="Website">
       <input type="text" style="display:none;" name="aG9uZXlwb3Q" value="">
       <input type="hidden" id="zohoDescript" name="Description" value="">
@@ -359,6 +359,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // Validates, fires form_submission for GTM, posts the lead to Zoho in the
     // background, then sends the visitor to Calendly. Does not rely on Zoho's redirect.
+    // If the fallback native post was used, Zoho returns here with ?submitted=1: continue to Calendly
+    if (window.location.search.indexOf('submitted=1') > -1) {
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          window.location.replace('https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?utm_source=website&utm_medium=contact_form');
+        }, 50);
+      });
+    }
     var jscSubmitting = false;
     var JSC_CALENDLY = 'https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?utm_source=website&utm_medium=contact_form';
     function submitJSC(form) {
@@ -392,7 +400,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         fetch(form.action, {
           method: 'POST',
           mode: 'no-cors',
-          redirect: 'manual',
           keepalive: true,
           body: new URLSearchParams(new FormData(form))
         }).then(postedDone).catch(function () {
