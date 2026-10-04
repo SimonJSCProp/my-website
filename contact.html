@@ -137,6 +137,7 @@ select option { background: #1b2236; color: var(--text); }
 textarea { resize: vertical; min-height: 110px; }
 .form-submit { display: block; width: 100%; background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; font-size: 16px; font-weight: 800; padding: 16px 24px; border-radius: 10px; border: none; cursor: pointer; margin-top: 8px; letter-spacing: 0.2px; box-shadow: 0 8px 28px rgba(46,204,113,0.3); transition: transform 0.2s, box-shadow 0.2s; }
 .form-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(46,204,113,0.4); }
+.form-submit:disabled { opacity: 0.7; cursor: wait; transform: none; }
 .form-note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 14px; line-height: 1.6; }
 /* SIDEBAR */
 .contact-sidebar { display: flex; flex-direction: column; gap: 20px; }
@@ -149,14 +150,6 @@ textarea { resize: vertical; min-height: 110px; }
 .contact-value { font-size: 14px; color: var(--text); font-weight: 600; }
 .contact-value a { color: var(--green); text-decoration: none; }
 .contact-value a:hover { text-decoration: underline; }
-/* CALENDLY EMBED */
-.calendly-card { border-radius: 14px; background: linear-gradient(135deg, var(--dark3), var(--dark4)); border: 1px solid var(--border); padding: 20px; text-align: center; }
-.calendly-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-.calendly-card > p { font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.65; }
-.calendly-inline-wrap { border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.25); }
-.calendly-inline-widget { width: 100%; height: 920px; }
-.calendly-fallback { display: block; background: var(--green); color: #fff; font-size: 14px; font-weight: 700; padding: 12px 28px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
-.calendly-fallback:hover { opacity: 0.88; }
 /* RESPONSE TIME */
 .response-promise { background: linear-gradient(135deg, rgba(46,204,113,0.08), rgba(46,204,113,0.03)); border: 1px solid rgba(46,204,113,0.2); border-radius: 14px; padding: 22px 24px; display: flex; align-items: center; gap: 16px; }
 .response-icon { font-size: 24px; flex-shrink: 0; }
@@ -207,8 +200,6 @@ textarea { resize: vertical; min-height: 110px; }
   .faq-question h3 { font-size: 14px; }
   /* Contact section: reduce inner padding */
   .contact-section { padding: 52px 16px; }
-  /* Calendly: shorter on mobile */
-  .calendly-inline-widget { height: 780px; }
 }
 /* ── BACKGROUND ENHANCEMENT ────────────────────────────────── */
 body {
@@ -225,9 +216,6 @@ body {
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="JSC Property Investments" />
   <link rel="manifest" href="/site.webmanifest" />
-  <!-- Calendly widget CSS -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <!-- Google Analytics 4 -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -267,14 +255,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- FORM -->
   <div class="form-block">
     <h2>Book a Kick-off Call</h2>
-    <p>Fill out the form and we'll be in touch within 24 hours to confirm a time that works for you.</p>
-    <form id="webform84429000007133064" action="https://crm.zoho.com.au/crm/WebToLeadForm" name="WebToLeads84429000007133064" method="POST" onsubmit="return checkMandatoryJSC()" accept-charset="UTF-8">
+    <p>Fill this in and pick a time that suits you on the next screen.</p>
+    <form id="webform84429000007133064" action="https://crm.zoho.com.au/crm/WebToLeadForm" name="WebToLeads84429000007133064" method="POST" onsubmit="return submitJSC(this)" accept-charset="UTF-8">
       <!-- Zoho CRM auth tokens — do not remove -->
       <input type="text" style="display:none;" name="xnQsjsdp" value="04814475826cfc0229dde59690c70b762e98b9f8b1c086360f60e8b8810cc440">
       <input type="hidden" name="zc_gad" id="zc_gad" value="">
       <input type="text" style="display:none;" name="xmIwtLD" value="c9195c18f3ad2ca9bf7f98da9626f39f7a26de9a715dbdfe718f5378e76578a9557c469c23196aa13625c59e3e9abfa3">
       <input type="text" style="display:none;" name="actionType" value="TGVhZHM=">
-      <input type="text" style="display:none;" name="returnURL" value="https://jscpropertyinvestments.com.au/contact?submitted=1">
+      <input type="text" style="display:none;" name="returnURL" value="https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?utm_source=website&utm_medium=contact_form">
       <input type="text" style="display:none;" name="LEADCF177" value="Website">
       <input type="text" style="display:none;" name="aG9uZXlwb3Q" value="">
       <input type="hidden" id="zohoDescript" name="Description" value="">
@@ -340,7 +328,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="message">Anything else we should know? (Optional)</label>
         <textarea id="message" placeholder="Tell us about your situation, any specific suburbs you're interested in, or questions you have..."></textarea>
       </div>
-      <button type="submit" class="form-submit">Book My Free Kick-off Call →</button>
+      <button type="submit" class="form-submit" id="jscSubmitBtn">Book My Free Kick-off Call →</button>
       <p class="form-note">By submitting this form you agree to be contacted by JSC Property Investments. We respect your privacy and will never share your details.</p>
     </form>
     <script>
@@ -368,10 +356,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.getElementById('zohoDescript').value = parts.join('\n');
       return true;
     }
-    // Show success message if redirected back after submission
-    if (window.location.search.indexOf('submitted=1') > -1) {
-      var fb = document.querySelector('.form-block');
-      if (fb) fb.innerHTML = '<div style="text-align:center;padding:60px 24px;"><div style="font-size:48px;margin-bottom:20px;">✓</div><h2 style="color:var(--green);margin-bottom:12px;">You\'re booked in.</h2><p style="color:var(--muted);font-size:16px;line-height:1.7;">We\'ll be in touch within 24 hours to confirm your Kick-off Call. Check your email.</p></div>';
+
+    // Validates, fires the form_submission event for GTM (Meta Lead, GA4),
+    // then submits to Zoho once GTM has finished (or after a short fallback).
+    var jscSubmitting = false;
+    function submitJSC(form) {
+      if (jscSubmitting) return false;
+      if (!checkMandatoryJSC()) return false;
+      jscSubmitting = true;
+      var btn = document.getElementById('jscSubmitBtn');
+      if (btn) btn.disabled = true;
+      var sent = false;
+      function go() {
+        if (sent) return;
+        sent = true;
+        form.submit();
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'form_submission',
+        form_name: 'contact_page',
+        eventCallback: go,
+        eventTimeout: 1000
+      });
+      setTimeout(go, 1200);
+      return false;
     }
     </script>
     <script id="wf_anal" src="https://crm.zohopublic.com.au/crm/WebFormAnalyticsServeServlet?rid=c44db2f0a6509a9036f4314b749814f821240a1a6348acdca61a0ad24a42307dfb3db584ebbfb71abb4a120ee30cb409gid1be2f0056e908da6b7caf0d2f4b8e4d53d2f44a5c0e3a02f8cacc22940b58bfbgid6bb652d851836363718af48a28f675bbdf67aa80ef775f4c605b59326d03f57cgidbd29e628cdf70a9922955dc55dedd53c833bca90858da48bbb7c4c93862048eb&tw=6c9a4f99fa80e2acff0106f1dffa3ac12da516c9902a36749a7ed4eb4b117c35"></script>
@@ -387,6 +396,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="sidebar-card">
       <h3>Contact Details</h3>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-value"><a href="tel:+61721160317">(07) 2116 0317</a></div>
+        </div>
+      </div>
       <div class="contact-item">
         <div class="contact-icon">📧</div>
         <div>
@@ -409,19 +425,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
-    <!-- CALENDLY INLINE EMBED -->
-    <div class="calendly-card">
-      <h3>Prefer to Book Directly?</h3>
-      <p>Pick a time that suits you below — no phone tag required.</p>
-      <div class="calendly-inline-wrap">
-        <div class="calendly-inline-widget"
-             data-url="https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=2ecc71">
-        </div>
-      </div>
-      <noscript>
-        <a href="https://calendly.com/elenore-jscpropertyinvestments/1-1-kick-off-call-with-elenore" class="calendly-fallback" target="_blank" rel="noopener">View Available Times →</a>
-      </noscript>
-    </div>
     <div class="sidebar-card">
       <h3>What Happens After You Enquire?</h3>
       <div style="display:flex;flex-direction:column;gap:14px;margin-top:4px;">
@@ -431,7 +434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div style="display:flex;gap:12px;align-items:flex-start;">
           <div style="width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">2</div>
-          <div style="font-size:13px;color:var(--muted);line-height:1.6;"><strong style="color:var(--text);display:block;margin-bottom:2px;">We get in touch</strong>Usually within a few hours to confirm your free strategy session.</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.6;"><strong style="color:var(--text);display:block;margin-bottom:2px;">You pick a time</strong>Choose a slot that suits you on the next screen. We confirm by text and email.</div>
         </div>
         <div style="display:flex;gap:12px;align-items:flex-start;">
           <div style="width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">3</div>
@@ -538,7 +541,5 @@ function toggleFaq(item) {
   if (!isOpen) item.classList.add('open');
 }
 </script>
-<!-- Calendly widget JS -->
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
