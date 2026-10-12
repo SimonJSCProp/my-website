@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Borrowing Capacity Calculator | JSC Property Investments</title>
-  <meta name="description" content="Find out how much you can borrow with JSC Property Investments' free borrowing capacity calculator. Powered by Quickli." />
+  <meta name="description" content="Find out how much you could borrow with JSC Property Investments' free borrowing capacity calculator. Instant estimate using standard Australian lender assessment rules." />
+  <link rel="canonical" href="https://jscpropertyinvestments.com.au/calculator">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -34,7 +35,7 @@
     .nav-links a:hover, .nav-links a.active { color: #fff; }
     .nav-cta { background: var(--green) !important; color: #fff !important; padding: 10px 20px; border-radius: 8px; font-size: 13px !important; }
     .nav-cta:hover { opacity: 0.88; }
-    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 101; }
+    .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 10px; margin-right: -10px; z-index: 101; }
     .hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -57,7 +58,7 @@
     .page-hero p { font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 auto; line-height: 1.75; }
 
     /* WIDGET SECTION */
-    .widget-section { max-width: 960px; margin: 0 auto; padding: 72px 24px 88px; }
+    .widget-section { max-width: 1140px; margin: 0 auto; padding: 72px 24px 88px; }
 
     .widget-intro { text-align: center; margin-bottom: 48px; }
     .section-tag { display: inline-block; background: var(--green-glow); border: 1px solid rgba(46,204,113,0.25); color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
@@ -71,7 +72,89 @@
     .widget-card-header p { font-size: 12px; color: var(--muted); }
     .widget-card-body { padding: 36px; }
 
-    .quickli-form { width: 100%; }
+    /* CALCULATOR */
+    .calc { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+    @media (max-width: 900px) { .calc { grid-template-columns: 1fr; } }
+
+    .calc-group { border: 1px solid var(--border); border-radius: 14px; padding: 22px 22px 6px; margin-bottom: 18px; background: rgba(255,255,255,0.015); }
+    .calc-group h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--green); font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .calc-group h4 .step { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; font-size: 11px; display: inline-flex; align-items: center; justify-content: center; letter-spacing: 0; }
+    .applicant-label { font-size: 12px; font-weight: 700; color: #fff; margin: 4px 0 10px; }
+
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 520px) { .row { grid-template-columns: 1fr; } }
+    .field { margin-bottom: 16px; min-width: 0; }
+    .field label { display: block; font-size: 12.5px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .field .hint { display: block; font-size: 11px; color: var(--muted); font-weight: 400; margin-top: 5px; line-height: 1.5; }
+    .input-wrap { position: relative; display: flex; align-items: center; }
+    .input-wrap .pre, .input-wrap .suf { position: absolute; font-size: 14px; color: var(--muted); pointer-events: none; }
+    .input-wrap .pre { left: 13px; }
+    .input-wrap .suf { right: 13px; font-size: 12px; }
+    .field input[type=text], .field select {
+      width: 100%; background: var(--dark); border: 1px solid rgba(255,255,255,0.12); color: #fff;
+      font: inherit; font-size: 16px; font-weight: 600; padding: 11px 13px; border-radius: 9px; outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; appearance: none;
+    }
+    .field select { background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 34px; }
+    .input-wrap.has-pre input { padding-left: 26px; }
+    .input-wrap.has-suf input { padding-right: 70px; }
+    .field input:focus, .field select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(46,204,113,0.15); }
+
+    .seg { display: flex; background: var(--dark); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 4px; gap: 4px; }
+    .seg button { flex: 1; background: none; border: none; color: var(--muted); font: inherit; font-size: 13px; font-weight: 700; padding: 9px 8px; border-radius: 7px; cursor: pointer; transition: background 0.2s, color 0.2s; }
+    .seg button[aria-pressed="true"] { background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; }
+    .seg button:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+
+    .check { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--text); margin-bottom: 16px; cursor: pointer; }
+    .check input { width: 18px; height: 18px; accent-color: var(--green); flex-shrink: 0; }
+
+    .hidden { display: none !important; }
+
+    /* RESULTS */
+    .results { position: sticky; top: 88px; }
+    .result-main { background: linear-gradient(160deg, rgba(46,204,113,0.13), rgba(46,204,113,0.03)); border: 1px solid rgba(46,204,113,0.3); border-radius: 16px; padding: 28px 26px; text-align: center; margin-bottom: 16px; }
+    .result-main .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--green); font-weight: 700; }
+    .result-main .big { font-size: clamp(38px, 5vw, 52px); font-weight: 900; letter-spacing: -1.5px; color: #fff; line-height: 1.1; margin: 8px 0 6px; font-variant-numeric: tabular-nums; }
+    .result-main .sub { font-size: 13px; color: var(--muted); }
+    .result-main .limit { display: inline-block; margin-top: 12px; font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 100px; background: rgba(255,255,255,0.06); color: var(--text); }
+
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .stat { background: var(--dark3); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+    .stat .k { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; font-weight: 700; }
+    .stat .v { font-size: 19px; font-weight: 800; color: #fff; margin-top: 3px; font-variant-numeric: tabular-nums; }
+
+    .breakdown { background: var(--dark3); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; }
+    .breakdown h5 { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 10px; }
+    .breakdown table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+    .breakdown td { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .breakdown td:last-child { text-align: right; font-weight: 700; color: #fff; white-space: nowrap; padding-left: 12px; }
+    .breakdown tr.total td { border-bottom: none; padding-top: 10px; font-weight: 800; color: #fff; }
+    .breakdown tr.total td:last-child { color: var(--green); }
+    .breakdown tr.total.neg td:last-child { color: #ff6b6b; }
+
+    .notes { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+    .notes li { font-size: 12.5px; line-height: 1.55; padding: 10px 14px; border-radius: 10px; background: rgba(240,180,41,0.08); border: 1px solid rgba(240,180,41,0.22); color: var(--text); }
+    .notes li.info { background: rgba(255,255,255,0.03); border-color: var(--border); color: var(--muted); }
+
+    .results .btn-primary { display: block; text-align: center; font-size: 15px; padding: 15px 20px; }
+
+    .method { margin-top: 28px; border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,0.02); }
+    .method summary { cursor: pointer; padding: 16px 20px; font-size: 14px; font-weight: 700; color: #fff; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .method summary::-webkit-details-marker { display: none; }
+    .method summary::after { content: '+'; color: var(--green); font-size: 20px; font-weight: 400; }
+    .method[open] summary::after { content: '\2212'; }
+    .method ul { padding: 0 20px 18px 38px; display: flex; flex-direction: column; gap: 7px; }
+    .method li { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+    .method li strong { color: var(--text); }
+
+    .mobile-bar { display: none; }
+    @media (max-width: 900px) {
+      .mobile-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(15,17,23,0.97); backdrop-filter: blur(14px); border-top: 1px solid rgba(46,204,113,0.3); transition: transform 0.25s; }
+      .mobile-bar.off { transform: translateY(110%); }
+      .mobile-bar .k { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--green); font-weight: 700; }
+      .mobile-bar .v { font-size: 22px; font-weight: 900; color: #fff; font-variant-numeric: tabular-nums; line-height: 1.1; }
+      .mobile-bar a { background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; font-size: 13px; font-weight: 800; padding: 10px 16px; border-radius: 8px; text-decoration: none; white-space: nowrap; }
+    }
 
     /* DISCLAIMER */
     .disclaimer { margin-top: 20px; padding: 16px 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 10px; }
@@ -79,7 +162,7 @@
     .disclaimer p strong { color: var(--text); }
 
     /* TRUST STRIP */
-    .trust-strip { max-width: 960px; margin: 0 auto; padding: 0 24px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .trust-strip { max-width: 1140px; margin: 0 auto; padding: 0 24px 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .trust-card { background: var(--dark2); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; text-align: center; }
     .trust-card .trust-icon { font-size: 28px; margin-bottom: 12px; }
     .trust-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: #fff; }
@@ -114,8 +197,9 @@
       .page-hero { padding: 52px 16px 44px; }
       .page-hero p { font-size: 16px; }
       .widget-section { padding: 52px 16px 60px; }
-      .widget-card-header { padding: 22px 24px; }
-      .widget-card-body { padding: 24px; }
+      .widget-card-header { padding: 22px 20px; }
+      .widget-card-body { padding: 18px 16px 24px; }
+      .calc-group { padding: 18px 16px 4px; }
       .trust-strip { padding: 0 16px 60px; }
       .cta-section { padding: 60px 16px; }
       .footer-top { gap: 24px; }
@@ -144,15 +228,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-accent">JSC</span> Property Investments</a>
+      <a class='nav-logo' href='/'><span class="logo-accent">JSC</span> Property Investments</a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="portfolio-performance.html">Results</a>
-        <a href="calculator.html" class="active">Calculator</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html" class="nav-cta">Book a Kick-off Call</a>
+        <a href='/'>Home</a>
+        <a href='/services'>Services</a>
+        <a href='/about'>About</a>
+        <a href='/portfolio-performance'>Results</a>
+        <a class='active' href='/calculator'>Calculator</a>
+        <a href='/blog'>Blog</a>
+        <a class='nav-cta' href='/contact'>Book a Kick-off Call</a>
       </div>
       <button class="hamburger" aria-label="Open menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open');">
         <span></span><span></span><span></span>
@@ -163,7 +247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="page-hero">
     <div class="page-tag">Free Tool</div>
     <h1>What Can You <span class="grad">Actually Borrow?</span></h1>
-    <p>Get an instant estimate of your borrowing capacity — no broker appointment needed. Takes less than 2 minutes.</p>
+    <p>Get an instant estimate of your borrowing capacity, worked out the way lenders assess it. No broker appointment needed. Takes about 2 minutes.</p>
   </section>
 
   <div class="widget-section">
@@ -178,32 +262,218 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="icon">🏦</div>
         <div>
           <h3>Borrowing Capacity Calculator</h3>
-          <p>Powered by Quickli — trusted by mortgage professionals across Australia</p>
+          <p>Uses standard Australian lender serviceability rules. Runs entirely in your browser.</p>
         </div>
       </div>
       <div class="widget-card-body">
-        <!-- Quickli widget begin -->
-        <div class="quickli-form" data-url="https://omegacapital.quickli-forms.com.au/v2/embed/widgets/omegacapital/VU769lbNPoLg/" data-widget-name="borrowing-capacity"></div>
-        <script type="text/javascript" src="https://quickli-forms.com.au/v2/embed.js" async></script>
-        <!-- Quickli widget end -->
+        <form class="calc" id="calc" novalidate onsubmit="return false">
+          <div class="inputs">
+
+            <div class="calc-group">
+              <h4><span class="step">1</span> About the purchase</h4>
+              <div class="field">
+                <label id="lbl-purpose">I'm buying</label>
+                <div class="seg" role="group" aria-labelledby="lbl-purpose" data-name="purpose">
+                  <button type="button" data-value="invest" aria-pressed="true">An investment</button>
+                  <button type="button" data-value="home" aria-pressed="false">A home to live in</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="field">
+                  <label id="lbl-apps">Applicants</label>
+                  <div class="seg" role="group" aria-labelledby="lbl-apps" data-name="applicants">
+                    <button type="button" data-value="1" aria-pressed="true">Just me</button>
+                    <button type="button" data-value="2" aria-pressed="false">Two of us</button>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="deps">Dependent children</label>
+                  <select id="deps">
+                    <option value="0" selected>None</option>
+                    <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                    <option value="4">4</option><option value="5">5 or more</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="field">
+                  <label for="deposit">Deposit and savings to put in</label>
+                  <div class="input-wrap has-pre"><span class="pre">$</span><input type="text" inputmode="numeric" id="deposit" value="100,000" data-money></div>
+                  <span class="hint">Cash or equity available for deposit and buying costs.</span>
+                </div>
+                <div class="field" id="fhb-field">
+                  <label class="check" style="margin-top:28px"><input type="checkbox" id="fhb"> I'm a first home buyer</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <h4><span class="step">2</span> Income</h4>
+              <div class="applicant-label app2-only hidden">Applicant 1</div>
+              <div class="row">
+                <div class="field">
+                  <label for="sal1">Base salary (before tax)</label>
+                  <div class="input-wrap has-pre has-suf"><span class="pre">$</span><input type="text" inputmode="numeric" id="sal1" value="120,000" data-money><span class="suf">per year</span></div>
+                </div>
+                <div class="field">
+                  <label for="oth1">Bonus, overtime, commission</label>
+                  <div class="input-wrap has-pre has-suf"><span class="pre">$</span><input type="text" inputmode="numeric" id="oth1" value="0" data-money><span class="suf">per year</span></div>
+                </div>
+              </div>
+              <label class="check"><input type="checkbox" id="hecs1"> I have a HECS/HELP debt</label>
+
+              <div class="app2-only hidden">
+                <div class="applicant-label">Applicant 2</div>
+                <div class="row">
+                  <div class="field">
+                    <label for="sal2">Base salary (before tax)</label>
+                    <div class="input-wrap has-pre has-suf"><span class="pre">$</span><input type="text" inputmode="numeric" id="sal2" value="0" data-money><span class="suf">per year</span></div>
+                  </div>
+                  <div class="field">
+                    <label for="oth2">Bonus, overtime, commission</label>
+                    <div class="input-wrap has-pre has-suf"><span class="pre">$</span><input type="text" inputmode="numeric" id="oth2" value="0" data-money><span class="suf">per year</span></div>
+                  </div>
+                </div>
+                <label class="check"><input type="checkbox" id="hecs2"> Applicant 2 has a HECS/HELP debt</label>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <label for="rentExist">Rent from properties you own now</label>
+                  <div class="input-wrap has-pre has-suf"><span class="pre">$</span><input type="text" inputmode="numeric" id="rentExist" value="0" data-money><span class="suf">per week</span></div>
+                </div>
+                <div class="field" id="rentNew-field">
+                  <label for="rentNew">Expected rent on the new property</label>
+                  <div class="input-wrap has-pre has-suf"><span class="pre">$</span><input type="text" inputmode="numeric" id="rentNew" value="550" data-money><span class="suf">per week</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <h4><span class="step">3</span> Spending and debts</h4>
+              <div class="field">
+                <label for="exp">Household living expenses</label>
+                <div class="input-wrap has-pre has-suf"><span class="pre">$</span><input type="text" inputmode="numeric" id="exp" value="3,000" data-money><span class="suf">per month</span></div>
+                <span class="hint">Groceries, bills, transport, insurance, school fees, childcare, entertainment. Don't include rent or loan repayments.</span>
+              </div>
+              <div class="row">
+                <div class="field">
+                  <label for="hlBal">Existing home loan balances</label>
+                  <div class="input-wrap has-pre"><span class="pre">$</span><input type="text" inputmode="numeric" id="hlBal" value="0" data-money></div>
+                  <span class="hint">Total owing on all property loans you'll keep.</span>
+                </div>
+                <div class="field">
+                  <label for="rent">Rent you pay now</label>
+                  <div class="input-wrap has-pre has-suf"><span class="pre">$</span><input type="text" inputmode="numeric" id="rent" value="0" data-money><span class="suf">per week</span></div>
+                  <span class="hint">Only if you'll keep renting after you buy.</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="field">
+                  <label for="plRepay">Car and personal loan repayments</label>
+                  <div class="input-wrap has-pre has-suf"><span class="pre">$</span><input type="text" inputmode="numeric" id="plRepay" value="0" data-money><span class="suf">per month</span></div>
+                </div>
+                <div class="field">
+                  <label for="plBal">Car and personal loan balances</label>
+                  <div class="input-wrap has-pre"><span class="pre">$</span><input type="text" inputmode="numeric" id="plBal" value="0" data-money></div>
+                </div>
+              </div>
+              <div class="field">
+                <label for="cc">Credit card limits (total)</label>
+                <div class="input-wrap has-pre"><span class="pre">$</span><input type="text" inputmode="numeric" id="cc" value="0" data-money></div>
+                <span class="hint">Lenders count the full limit, even if the card is paid off each month.</span>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <h4><span class="step">4</span> Loan settings</h4>
+              <div class="row">
+                <div class="field">
+                  <label for="rate">Interest rate</label>
+                  <div class="input-wrap has-suf"><input type="text" inputmode="decimal" id="rate" value="6.40"><span class="suf">% p.a.</span></div>
+                </div>
+                <div class="field">
+                  <label for="term">Loan term</label>
+                  <select id="term">
+                    <option value="30" selected>30 years</option>
+                    <option value="25">25 years</option>
+                    <option value="20">20 years</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="buffer">Lender assessment buffer</label>
+                <div class="input-wrap has-suf"><input type="text" inputmode="decimal" id="buffer" value="3.00"><span class="suf">% on top</span></div>
+                <span class="hint">APRA expects lenders to test you 3% above the actual rate. A few non-bank lenders use 2%.</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="results" id="results" aria-live="polite">
+            <div class="result-main">
+              <div class="lbl">Estimated borrowing capacity</div>
+              <div class="big" id="outLoan">$0</div>
+              <div class="sub" id="outLoanSub">Based on what you've entered</div>
+              <div class="limit" id="outLimit"></div>
+            </div>
+            <div class="stat-grid">
+              <div class="stat"><div class="k">Indicative purchase price</div><div class="v" id="outPrice">$0</div></div>
+              <div class="stat"><div class="k">Monthly repayment</div><div class="v" id="outRepay">$0</div></div>
+              <div class="stat"><div class="k">Loan to value (LVR)</div><div class="v" id="outLvr">0%</div></div>
+              <div class="stat"><div class="k">Assessed at</div><div class="v" id="outAssess">0%</div></div>
+            </div>
+            <div class="breakdown">
+              <h5>How lenders see your month</h5>
+              <table>
+                <tbody>
+                  <tr><td id="bIncomeLbl">Income after tax (shaded)</td><td id="bIncome">$0</td></tr>
+                  <tr><td id="bExpLbl">Living expenses</td><td id="bExp">$0</td></tr>
+                  <tr><td>Existing debts and rent</td><td id="bDebts">$0</td></tr>
+                                    <tr class="total" id="bSurplusRow"><td>Available for the new loan</td><td id="bSurplus">$0</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="notes" id="notes"></ul>
+            <a class="btn-primary" href="/contact">Book a Free Kick-off Call</a>
+          </aside>
+        </form>
+
+        <details class="method">
+          <summary>How this estimate is worked out</summary>
+          <ul>
+            <li><strong>Assessment rate.</strong> Your repayments are tested at your interest rate plus the buffer, as principal and interest over the loan term. This is the APRA serviceability test every bank applies.</li>
+            <li><strong>Tax.</strong> Income is taxed at 2026–27 Australian resident rates, including the 2% Medicare levy and the Low Income Tax Offset.</li>
+            <li><strong>Income shading.</strong> Base salary counts in full. Bonus, overtime, commission and rental income count at 80%, which is typical of major lenders.</li>
+            <li><strong>Living expenses.</strong> We use whichever is higher: what you enter, or a minimum benchmark based on household size and income (similar to the HEM benchmark lenders use).</li>
+            <li><strong>Existing debts.</strong> Existing home loans are assessed at the assessment rate over 30 years. Each $1 of credit card limit reduces borrowing capacity by about $5, whether or not the card is used.</li>
+            <li><strong>HECS/HELP.</strong> Compulsory repayments are taken off the income of the applicant who holds the debt, using the ATO income-based schedule. If that applicant earns under the repayment threshold, it has no effect.</li>
+            <li><strong>Debt to income cap.</strong> Total debts are capped at 6 times gross income, a common lender limit.</li>
+            <li><strong>Purchase price.</strong> Your loan plus deposit, less estimated Queensland transfer duty and about $3,000 in legal and other costs. Lenders mortgage insurance is not included.</li>
+          </ul>
+        </details>
 
         <div class="disclaimer">
-          <p><strong>Important:</strong> This calculator provides an estimate only and is not a credit assessment or formal loan approval. Results are indicative and based on the information you provide. Speak with a licensed mortgage broker or lender for advice specific to your situation. JSC Property Investments is a buyers agency and does not provide financial or lending advice.</p>
+          <p><strong>Important:</strong> This calculator provides an estimate only and is not a credit assessment or formal loan approval. Any loan is subject to the lender's final approval. Results are indicative and based on the information you provide and the assumptions above. Each lender applies its own policy, so your actual borrowing capacity may be higher or lower. Speak with a licensed mortgage broker or lender for advice specific to your situation. JSC Property Investments is a buyers agency and does not provide financial or lending advice.</p>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="mobile-bar" id="mobileBar">
+    <div><div class="k">You could borrow</div><div class="v" id="mbLoan">$0</div></div>
+    <a href="#results">See breakdown</a>
+  </div>
+
   <div class="trust-strip">
     <div class="trust-card">
       <div class="trust-icon">🔒</div>
-      <h4>Your Data Is Safe</h4>
-      <p>This tool is powered by Quickli. Your information is not stored or shared with JSC Property Investments.</p>
+      <h4>Your Data Stays With You</h4>
+      <p>The calculator runs in your browser. Nothing you enter is stored or sent anywhere.</p>
     </div>
     <div class="trust-card">
       <div class="trust-icon">⚡</div>
       <h4>Instant Results</h4>
-      <p>Get a borrowing estimate in under 2 minutes — no waiting, no callbacks, no obligation.</p>
+      <p>Your estimate updates as you type. No sign-up, no callbacks, no obligation.</p>
     </div>
     <div class="trust-card">
       <div class="trust-icon">🎯</div>
@@ -215,7 +485,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="cta-section">
     <h2>Ready to Put That <span class="grad">Number to Work?</span></h2>
     <p>Book a free discovery call and let's build a property strategy around your borrowing power.</p>
-    <a href="contact.html" class="btn-primary">Book Your Free Kick-off Call</a>
+    <a class='btn-primary' href='/contact'>Book Your Free Kick-off Call</a>
   </section>
 
   <footer class="site-footer">
@@ -228,25 +498,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="footer-nav">
           <h4>Navigation</h4>
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About Us</a>
-          <a href="portfolio-performance.html">Portfolio Results</a>
-          <a href="calculator.html">Calculator</a>
-      <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
+          <a href='/'>Home</a>
+          <a href='/services'>Services</a>
+          <a href='/about'>About Us</a>
+          <a href='/portfolio-performance'>Portfolio Results</a>
+          <a href='/calculator'>Calculator</a>
+          <a href='/blog'>Blog</a>
+          <a href='/contact'>Contact</a>
         </div>
-      <div class="footer-nav">
-        <h4>Our Markets</h4>
-        <a href="buyers-agent-moreton-bay.html">Moreton Bay, QLD</a>
-        <a href="buyers-agent-ipswich.html">Ipswich, QLD</a>
-        <a href="buyers-agent-logan.html">Logan, QLD</a>
-        <a href="buyers-agent-brisbane.html">Brisbane, QLD</a>
-        <a href="buyers-agent-redlands.html">Redlands, QLD</a>
-      </div>
+        <div class="footer-nav">
+          <h4>Our Markets</h4>
+          <a href='/buyers-agent-moreton-bay'>Moreton Bay, QLD</a>
+          <a href='/buyers-agent-ipswich'>Ipswich, QLD</a>
+          <a href='/buyers-agent-logan'>Logan, QLD</a>
+          <a href='/buyers-agent-brisbane'>Brisbane, QLD</a>
+          <a href='/buyers-agent-redlands'>Redlands, QLD</a>
+        </div>
         <div class="footer-nav">
           <h4>Legal</h4>
-          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href='/privacy-policy'>Privacy Policy</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -256,5 +526,236 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </footer>
 
+<script>
+(function () {
+  // ---------- Assumptions (review annually) ----------
+  var SHADE_VARIABLE = 0.8;      // bonus / overtime / commission
+  var SHADE_RENT = 0.8;          // rental income
+  var CC_MULTIPLE = 5;           // borrowing capacity lost per $ of card limit
+  var DTI_CAP = 6;               // max total debt / gross income
+  var OTHER_COSTS = 3000;        // legals, searches, registration
+  var EXISTING_HL_TERM = 30;
+
+  var $ = function (id) { return document.getElementById(id); };
+  var state = { purpose: 'invest', applicants: 1 };
+
+  function num(id) {
+    var v = parseFloat(String($(id).value).replace(/[^0-9.]/g, ''));
+    return isFinite(v) ? v : 0;
+  }
+  function money(n) { return '$' + Math.round(n).toLocaleString('en-AU'); }
+
+  // 2026-27 resident tax rates
+  function incomeTax(ti) {
+    if (ti <= 18200) return 0;
+    if (ti <= 45000) return (ti - 18200) * 0.15;
+    if (ti <= 135000) return 4020 + (ti - 45000) * 0.30;
+    if (ti <= 190000) return 31020 + (ti - 135000) * 0.37;
+    return 51370 + (ti - 190000) * 0.45;
+  }
+  function lito(ti) {
+    if (ti <= 37500) return 700;
+    if (ti <= 45000) return 700 - (ti - 37500) * 0.05;
+    if (ti <= 66667) return Math.max(0, 325 - (ti - 45000) * 0.015);
+    return 0;
+  }
+  function medicare(ti) {
+    var lo = 27222, hi = 34027;
+    if (ti <= lo) return 0;
+    if (ti <= hi) return (ti - lo) * 0.10;
+    return ti * 0.02;
+  }
+  function netIncome(ti) {
+    var tax = Math.max(0, incomeTax(ti) - lito(ti));
+    return ti - tax - medicare(ti);
+  }
+  // HECS/HELP marginal repayment schedule (from 2025-26)
+  function hecs(ri) {
+    if (ri <= 67000) return 0;
+    if (ri <= 125000) return (ri - 67000) * 0.15;
+    return 8700 + (ri - 125000) * 0.17;
+  }
+
+  function pmt(rateAnnual, years, principal) {
+    var r = rateAnnual / 12, n = years * 12;
+    if (principal <= 0) return 0;
+    if (r === 0) return principal / n;
+    return principal * r / (1 - Math.pow(1 + r, -n));
+  }
+  function pv(rateAnnual, years, payment) {
+    var r = rateAnnual / 12, n = years * 12;
+    if (payment <= 0) return 0;
+    if (r === 0) return payment * n;
+    return payment * (1 - Math.pow(1 + r, -n)) / r;
+  }
+
+  // Queensland transfer duty
+  function dutyGeneral(p) {
+    if (p <= 5000) return 0;
+    if (p <= 75000) return (p - 5000) * 0.015;
+    if (p <= 540000) return 1050 + (p - 75000) * 0.035;
+    if (p <= 1000000) return 17325 + (p - 540000) * 0.045;
+    return 38025 + (p - 1000000) * 0.0575;
+  }
+  function dutyHome(p) {
+    if (p <= 350000) return p * 0.01;
+    if (p <= 540000) return 3500 + (p - 350000) * 0.035;
+    return dutyGeneral(p);
+  }
+  function duty(p, purpose, fhb) {
+    if (purpose === 'invest') return dutyGeneral(p);
+    if (fhb) {
+      // First home concession: nil to $700k, phasing out to $800k
+      if (p <= 700000) return 0;
+      if (p < 800000) return dutyHome(p) * (p - 700000) / 100000;
+    }
+    return dutyHome(p);
+  }
+
+  // Minimum living-expense benchmark (HEM-style approximation), monthly
+  function benchmark(apps, deps, grossAnnual) {
+    var base = apps === 2 ? 2550 : 1700;
+    var gm = grossAnnual / 12;
+    return base + deps * 450 + Math.max(0, gm - 8000) * 0.05;
+  }
+
+  var lastTracked = null;
+
+  function calc() {
+    var apps = state.applicants;
+    var invest = state.purpose === 'invest';
+    var deps = parseInt($('deps').value, 10) || 0;
+    var rate = num('rate') / 100;
+    var assess = rate + num('buffer') / 100;
+    var term = parseInt($('term').value, 10);
+
+    var rentWk = num('rentExist') + (invest ? num('rentNew') : 0);
+    var rentShadedAnnual = rentWk * 52 * SHADE_RENT;
+
+    var people = [{ sal: num('sal1'), oth: num('oth1'), hecs: $('hecs1').checked }];
+    if (apps === 2) people.push({ sal: num('sal2'), oth: num('oth2'), hecs: $('hecs2').checked });
+
+    var grossTotal = 0, netTotal = 0, hecsTotal = 0;
+    people.forEach(function (p) {
+      var ti = p.sal + p.oth * SHADE_VARIABLE + rentShadedAnnual / people.length;
+      grossTotal += ti;
+      netTotal += netIncome(ti);
+      // HECS reduces only the debt holder's own income
+      if (p.hecs) hecsTotal += hecs(p.sal + p.oth + (rentWk * 52) / people.length);
+    });
+
+    var hecsMonthly = hecsTotal / 12;
+    var netMonthly = netTotal / 12 - hecsMonthly;
+    var declared = num('exp');
+    var bench = benchmark(apps, deps, grossTotal);
+    var expUsed = Math.max(declared, bench);
+
+    var hlBal = num('hlBal'), plBal = num('plBal'), ccLim = num('cc');
+    var debtsMonthly = pmt(assess, EXISTING_HL_TERM, hlBal) + num('plRepay') + num('rent') * 52 / 12;
+
+    var surplus = netMonthly - expUsed - debtsMonthly;
+    var servLoan = Math.max(0, pv(assess, term, surplus) - ccLim * CC_MULTIPLE);
+    var dtiLoan = Math.max(0, DTI_CAP * grossTotal - hlBal - plBal - ccLim);
+    var loan = Math.floor(Math.max(0, Math.min(servLoan, dtiLoan)) / 1000) * 1000;
+
+    // Purchase price: loan + deposit - duty(price) - other costs
+    var deposit = num('deposit'), fhb = !invest && $('fhb').checked;
+    var price = loan + deposit;
+    for (var i = 0; i < 40; i++) price = loan + deposit - duty(price, state.purpose, fhb) - OTHER_COSTS;
+    price = Math.max(0, price);
+    var lvr = price > 0 ? loan / price : 0;
+    var stampDuty = duty(price, state.purpose, fhb);
+
+    // Output
+    $('outLoan').textContent = money(loan);
+    $('mbLoan').textContent = money(loan);
+    $('outLoanSub').textContent = loan > 0 ? 'Rounded down to the nearest $1,000' : 'Adjust your details to see an estimate';
+    var limitEl = $('outLimit');
+    if (loan <= 0) { limitEl.textContent = 'Not enough surplus income to service a loan'; }
+    else if (dtiLoan < servLoan) { limitEl.textContent = 'Limited by debt to income cap (6x)'; }
+    else { limitEl.textContent = 'Limited by serviceability'; }
+
+    $('outPrice').textContent = price > 0 ? money(Math.floor(price / 1000) * 1000) : '$0';
+    $('outRepay').textContent = money(pmt(rate, term, loan));
+    $('outLvr').textContent = (lvr * 100).toFixed(0) + '%';
+    $('outAssess').textContent = (assess * 100).toFixed(2) + '%';
+
+    $('bIncome').textContent = money(netMonthly);
+    $('bExpLbl').textContent = expUsed > declared ? 'Living expenses (lender minimum)' : 'Living expenses (your figure)';
+    $('bExp').textContent = '−' + money(expUsed);
+    $('bDebts').textContent = '−' + money(debtsMonthly);
+    $('bIncomeLbl').textContent = hecsMonthly > 0 ? 'Income after tax and HECS (shaded)' : 'Income after tax (shaded)';
+    $('bSurplus').textContent = (surplus < 0 ? '−' : '') + money(Math.abs(surplus));
+    $('bSurplusRow').classList.toggle('neg', surplus < 0);
+
+    var notes = [];
+    if (loan > 0 && lvr > 0.95) notes.push(['warn', 'Your deposit covers less than 5% of the purchase price. Most lenders need at least 5% plus costs, so your deposit may limit you before your income does.']);
+    else if (loan > 0 && lvr > 0.8) notes.push(['warn', 'Borrowing over 80% of the price usually means lenders mortgage insurance (LMI), which isn\'t included here and would reduce your purchase price or add to the loan.']);
+    if (expUsed > declared) notes.push(['info', 'Lenders won\'t accept expenses below a minimum benchmark for your household, so we\'ve used ' + money(bench) + ' a month instead of your figure.']);
+    if (stampDuty > 0 && price > 0) notes.push(['info', 'Includes about ' + money(stampDuty) + ' in Queensland transfer duty' + (invest ? '' : ' at the home concession rate') + '.']);
+    if (fhb && price > 0 && stampDuty === 0) notes.push(['info', 'As a first home buyer you pay no transfer duty under $700,000 in Queensland. Brand new homes are duty-free at any price.']);
+    if (ccLim > 0) notes.push(['info', 'Cancelling or reducing your ' + money(ccLim) + ' in card limits could add roughly ' + money(ccLim * CC_MULTIPLE) + ' to your borrowing capacity.']);
+    $('notes').innerHTML = notes.map(function (n) {
+      return '<li class="' + (n[0] === 'info' ? 'info' : '') + '">' + n[1] + '</li>';
+    }).join('');
+
+    track(loan);
+  }
+
+  // Anonymous GTM event, fired once after the user has stopped editing
+  var trackTimer;
+  function track(loan) {
+    clearTimeout(trackTimer);
+    trackTimer = setTimeout(function () {
+      var band = loan <= 0 ? '0' : loan < 400000 ? '<400k' : loan < 700000 ? '400-700k' : loan < 1000000 ? '700k-1m' : '1m+';
+      if (band === lastTracked) return;
+      lastTracked = band;
+      (window.dataLayer = window.dataLayer || []).push({ event: 'calculator_result', borrowing_band: band, purpose: state.purpose, applicants: state.applicants });
+    }, 4000);
+  }
+
+  // Segmented controls
+  document.querySelectorAll('.seg').forEach(function (seg) {
+    seg.addEventListener('click', function (e) {
+      var btn = e.target.closest('button');
+      if (!btn) return;
+      seg.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      var name = seg.dataset.name, val = btn.dataset.value;
+      state[name] = name === 'applicants' ? parseInt(val, 10) : val;
+      syncVisibility();
+      calc();
+    });
+  });
+
+  function syncVisibility() {
+    document.querySelectorAll('.app2-only').forEach(function (el) { el.classList.toggle('hidden', state.applicants !== 2); });
+    $('rentNew-field').classList.toggle('hidden', state.purpose !== 'invest');
+    $('fhb-field').classList.toggle('hidden', state.purpose !== 'home');
+  }
+
+  // Thousands separators on money fields
+  document.querySelectorAll('input[data-money]').forEach(function (input) {
+    input.addEventListener('input', function () {
+      var digits = input.value.replace(/[^0-9]/g, '');
+      var formatted = digits ? parseInt(digits, 10).toLocaleString('en-AU') : '';
+      if (formatted !== input.value) input.value = formatted;
+    });
+    input.addEventListener('focus', function () { if (input.value === '0') input.select(); });
+  });
+
+  // Hide the mobile bar once the results panel scrolls into view (and below it)
+  function syncBar() {
+    $('mobileBar').classList.toggle('off', $('results').getBoundingClientRect().top < window.innerHeight - 80);
+  }
+  window.addEventListener('scroll', syncBar, { passive: true });
+  window.addEventListener('resize', syncBar);
+  syncBar();
+
+  $('calc').addEventListener('input', calc);
+  $('calc').addEventListener('change', calc);
+  syncVisibility();
+  calc();
+})();
+</script>
 </body>
 </html>
