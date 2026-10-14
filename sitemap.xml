@@ -161,11 +161,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jscpropertyinvestments.com.au/blog/us-iran-war-property-prices</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jscpropertyinvestments.com.au/blog/house-vs-townhouse</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -281,22 +276,37 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jscpropertyinvestments.com.au/blog/rate-cut-era-over-2026-hikes</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://jscpropertyinvestments.com.au/blog/negative-gearing-changes-investor</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jscpropertyinvestments.com.au/blog/budget-new-builds-fundamentals</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jscpropertyinvestments.com.au/blog/end-cgt-discount-cost-base-indexation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/rba-cash-rate-september-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/iran-war-inflation-australian-property</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/negative-gearing-cgt-changes-2027</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/brisbane-property-prices-falling-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/falling-house-prices-rising-rents-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
