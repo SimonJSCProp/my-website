@@ -144,7 +144,11 @@
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    @media (max-width: 720px) {
+    @media (max-width: 920px) {
+      .nav-links { gap: 18px; }
+      .nav-links a { font-size: 13px; }
+    }
+    @media (max-width: 840px) {
       .hamburger { display: flex; }
       .nav-links {
         display: none !important; flex-direction: column;
