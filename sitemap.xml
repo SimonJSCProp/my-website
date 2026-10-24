@@ -310,4 +310,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/apra-debt-to-income-cap-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/first-home-buyers-under-1-million-brisbane</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/lvr-above-80-refinancing-falling-values</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/2026-housing-downturn-vs-2022</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/queensland-budget-2026-27-investors</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/30-percent-minimum-tax-capital-gains</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
