@@ -340,4 +340,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/proposed-discretionary-trust-minimum-tax</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/property-investor-cash-buffer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
