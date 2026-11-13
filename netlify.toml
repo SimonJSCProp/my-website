@@ -23,9 +23,11 @@
   status = 301
 
 # Retired rate-cut-era-over-2026-hikes, superseded. 301 keeps the ranking signal with the replacement.
+# Repointed 13 Nov 2026: its old target (rba-cash-rate-september-2026) has itself been
+# retired, so this now goes straight to the current article instead of chaining through it.
 [[redirects]]
   from = "/blog/rate-cut-era-over-2026-hikes"
-  to = "/blog/rba-cash-rate-september-2026"
+  to = "/blog/rba-cash-rate-november-2026"
   status = 301
 
 # Retired us-iran-war-property-prices, superseded. 301 keeps the ranking signal with the replacement.
@@ -38,6 +40,13 @@
 [[redirects]]
   from = "/blog/negative-gearing-changes-investor"
   to = "/blog/negative-gearing-cgt-changes-2027"
+  status = 301
+
+# Retired rba-cash-rate-september-2026 (cash rate moved to 4.85% on 3 Nov 2026), superseded.
+# 301 keeps the ranking signal with the replacement.
+[[redirects]]
+  from = "/blog/rba-cash-rate-september-2026"
+  to = "/blog/rba-cash-rate-november-2026"
   status = 301
 
 # 404 fallback
