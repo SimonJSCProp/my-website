@@ -286,11 +286,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jscpropertyinvestments.com.au/blog/rba-cash-rate-september-2026</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://jscpropertyinvestments.com.au/blog/iran-war-inflation-australian-property</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -347,6 +342,21 @@
   </url>
   <url>
     <loc>https://jscpropertyinvestments.com.au/blog/property-investor-cash-buffer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/rba-cash-rate-november-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/fixed-or-variable-rising-rates</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/check-flood-risk-brisbane</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
