@@ -375,4 +375,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/rba-december-2026-decision-and-beyond</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/investor-lending-record-fall-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jscpropertyinvestments.com.au/blog/low-bank-valuation-what-now</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
